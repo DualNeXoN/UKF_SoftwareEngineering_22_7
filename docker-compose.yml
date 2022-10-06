@@ -1,25 +1,33 @@
 version: '3'
 
 networks:
-  example:
+  laravel:
 services:
   nginx:
-    image: nginx:alpine
-    ports:
-      - "8081:80"
-  php:
-    image: php:fpm-alpine
-  apache2:
-    image: php:7.4-apache
-    container_name: ApacheWebServer
+    image: nginx:stable-alpine
+    container_name: WebServer
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html
+        - ./src:/var/www/html
+        - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - mysql
+        - mysql
+        - php
     networks:
-      - example
+        - laravel
+  php:
+    build:
+      context: .
+      dockerfile: DockerFile
+    container_name: PHP
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - laravel
+
   mysql:
     image: mysql:5.7.30
     container_name: MySQLDatabase
@@ -37,4 +45,4 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
-      - example
+      - laravel
