@@ -18,8 +18,8 @@ services:
         - laravel
   php:
     build:
-      context: .
-      dockerfile: DockerFile
+      context: ""
+      dockerfile: Dockerfile
     container_name: PHP
     volumes:
       - ./src:/var/www/html
@@ -27,7 +27,6 @@ services:
       - "9000:9000"
     networks:
       - laravel
-
   mysql:
     image: mysql:5.7.30
     container_name: MySQLDatabase
