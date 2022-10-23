@@ -18,7 +18,7 @@ services:
         - laravel
   php:
     build:
-      context: ""
+      context: .
       dockerfile: Dockerfile
     container_name: PHP
     volumes:
@@ -45,3 +45,19 @@ services:
       SERVICE_NAME: mysql
     networks:
       - laravel
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: PHPMyAdmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: test
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - laravel
+    volumes:
+      - ./config/phpmyadmin/theme/:/www/themes/theme/
