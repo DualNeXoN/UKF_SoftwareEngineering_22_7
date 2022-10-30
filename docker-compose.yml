@@ -52,7 +52,7 @@ services:
       - mysql
     environment:
       PMA_HOST: mysql
-      PMA_USER: root
+      PMA_USER: laravel
       PMA_PASSWORD: test
     restart: always
     ports:
