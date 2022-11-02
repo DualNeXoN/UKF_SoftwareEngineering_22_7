@@ -1,0 +1,37 @@
+        h3 {
+            text-align: center;
+            color: white
+        }
+
+        h1 {
+            text-align: center;
+            color: white
+        }
+
+        .bg-nav {
+            overflow: visible;
+            background-color: #ffffff;
+        }
+        .mw {
+            overflow: hidden;
+            font-size: 20px
+        }
+
+        body {
+            background-color: #022133;
+            
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        footer {
+            position: fixed;
+            left: 10px;
+            bottom: 5px;
+            right: 10px;
+            width: 100%;
+            background-color: #f1f1f1;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
