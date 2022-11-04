@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('surname', 45)->nullable(false);
             $table->date('birth_date')->nullable(true);
             $table->unsignedBigInteger('address_id')->nullable(true);
+            $table->timestamps();
 
             $table->foreign('general_user_id')->references('id')->on('general_user');
             $table->foreign('address_id')->references('id')->on('address');

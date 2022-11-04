@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('contact', function (Blueprint $table) {
             $table->id();
             $table->string('label', 24)->nullable(false)->unique();
+            $table->timestamps();
         });
 
         Schema::create('person_has_contact', function (Blueprint $table) {

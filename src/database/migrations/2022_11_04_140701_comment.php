@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('practice_id')->nullable(false);
             $table->unsignedBigInteger('person_id')->nullable(false);
             $table->string('message', 2048)->nullable(false);
-            $table->timestamp('time')->nullable(false)->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps();
 
             $table->foreign('practice_id')->references('id')->on('student_professional_practice');
             $table->foreign('person_id')->references('id')->on('person');

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('label', 96)->nullable(false);
             $table->string('description', 4096)->nullable(true);
             $table->unsignedBigInteger('study_programme_id')->nullable(false);
+            $table->timestamps();
 
             $table->foreign('company_id')->references('id')->on('company');
             $table->foreign('study_programme_id')->references('id')->on('study_programme');

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('student_feedback', 4096)->nullable(true);
             $table->string('company_feedback', 4096)->nullable(true);
             $table->tinyInteger('archived')->nullable(false)->default(0);
+            $table->timestamps();
 
             $table->foreign('student_id')->references('id')->on('person');
             $table->foreign('professional_practice_id')->references('id')->on('professional_practice');

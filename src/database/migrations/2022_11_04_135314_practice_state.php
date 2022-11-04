@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('practice_state', function (Blueprint $table) {
             $table->id();
             $table->string('state', 32)->nullable(false);
+            $table->timestamps();
         });
     }
 

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('academic_year', function (Blueprint $table) {
             $table->id();
             $table->string('year', 9)->nullable(false)->unique();
+            $table->timestamps();
         });
     }
 

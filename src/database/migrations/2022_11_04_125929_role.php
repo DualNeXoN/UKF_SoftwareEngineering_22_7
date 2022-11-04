@@ -16,10 +16,12 @@ return new class extends Migration
         Schema::create('role', function (Blueprint $table) {
             $table->id();
             $table->string('name', 45)->nullable(false)->unique();
+            $table->timestamps();
         });
 
         Schema::create('permission', function (Blueprint $table) {
             $table->string('value', 64)->nullable(false)->unique();
+            $table->timestamps();
 
             $table->primary('value');
         });
