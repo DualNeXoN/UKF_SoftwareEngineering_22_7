@@ -29,3 +29,11 @@ Route::get('/signup', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/students', function () {
+    return view('students');
+});
+
+Route::get('/companies', function () {
+    return view('companies');
+});
