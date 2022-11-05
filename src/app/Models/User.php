@@ -8,9 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
 
+    protected $table = 'general_user';
+
     protected $fillable = [
-        'uId',
-        'roleId',
+        'uid',
+        'password',
+        'role_id',
     ];
 
     protected $hidden = [
