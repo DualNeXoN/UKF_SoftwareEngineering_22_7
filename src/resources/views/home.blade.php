@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <h1>Home page</h1>
-    <h3>content of the home.blade.php</h3>
-
+<div id="box-bg" data-aos="fade-right">
+  <img src={{url('img/concept_homepage_tp.png')}} class="img-pos" alt="">
+  </div>
 @endsection

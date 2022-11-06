@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container-fluid">
-    <a href="/"><img src="{{asset('logo1.png')}}" alt="" width="75" class="navbar-brand"></a>
+    <a href="/"><img src="{{asset('img/logo_pputils_t.png')}}" alt="" width="75" class="navbar-brand"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
