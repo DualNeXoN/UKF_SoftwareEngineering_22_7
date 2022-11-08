@@ -20,7 +20,7 @@ return new class extends Migration
 
         Schema::create('study_programme', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 64)->nullable(false)->unique();
+            $table->string('name', 64)->nullable(false);
             $table->string('abbreviation', 12)->nullable(false)->unique();
             $table->unsignedBigInteger('degree_id')->nullable(false);
             $table->timestamps();

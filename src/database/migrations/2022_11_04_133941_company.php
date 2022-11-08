@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 96)->nullable(false);
             $table->unsignedBigInteger('address_id')->nullable(false);
-            $table->unsignedBigInteger('contact_person_id')->nullable(false);
+            $table->unsignedBigInteger('contact_person_id')->nullable(true);
             $table->timestamps();
 
             $table->foreign('address_id')->references('id')->on('address');

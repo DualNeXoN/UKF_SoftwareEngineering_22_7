@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bc",
+		"study_programmes": [
+            {
+                "name": "Aplikovaná informatika",
+                "abbreviation": "AI-bc",
+                "courses": [
+                    {
+                        "name": "Odborná prax",
+                        "abbreviation": "AI-OP-bc"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+		"name": "Mgr",
+        "study_programmes": [
+            {
+                "name": "Aplikovaná informatika",
+                "abbreviation": "AI-m",
+                "courses": [
+                    {
+                        "name": "Odborná prax",
+                        "abbreviation": "AI-OP-m"
+                    }
+                ]
+            }
+        ]
+    }
+]
