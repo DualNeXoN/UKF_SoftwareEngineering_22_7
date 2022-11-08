@@ -10,7 +10,7 @@ h1 {
 
 .bg-nav {
     overflow: visible;
-    background-color: #eeeeee;
+    background-color: #ffffff;
 }
 .mw {
     overflow: hidden;
@@ -18,6 +18,7 @@ h1 {
 }
 
 body {
+    align-items: flex-end;
     background-color: #eeeeee;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,3 +81,22 @@ body {
 .card-registration .select-arrow {
     top: 13px;
 }
+.input-w {
+    width: 200px;
+}
+.btwn {
+    margin-left: 15px;
+}
+.btwn-2 {
+    margin-left: 10px;
+}
+.pos-mar {
+    margin-bottom: 100px;
+    top: 100px;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
