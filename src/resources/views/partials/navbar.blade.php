@@ -4,7 +4,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -23,8 +23,17 @@
         </li>
       </ul>
     </div>
-        <a href="/login"><button class="btn my-1 my-sm-0 mw" type="button">Login</button></a>
-        <a href="/signup"><button class="btn my-1 my-sm-0 mw" type="button">Sign up</button></a>
+
+        @if(Session::has('user'))
+            @include('partials.session')
+        @else
+            <a href="/login"><button class="btn my-1 my-sm-0 mw" type="button">Login</button></a>
+
+            <a href="/signup"><button class="btn my-1 my-sm-0 mw" type="button">Sign up</button></a>
+        @endif
+
+
+
     </div>
   </nav>
 

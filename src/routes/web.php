@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('home');
 });
@@ -22,13 +23,9 @@ Route::get('/translations/{param}', function ($param) {
 });
 //End of: Test translations
 
-Route::get('/signup', function () {
-    return view('signup');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login',[LoginController::class,'login']);
+Route::post('/login',[LoginController::class,'loginUser'])->name('login-user');
+Route::get('/logout',[LoginController::class,'Logout']);
 
 Route::get('/students', function () {
     return view('students');
@@ -37,3 +34,4 @@ Route::get('/students', function () {
 Route::get('/companies', function () {
     return view('companies');
 });
+
