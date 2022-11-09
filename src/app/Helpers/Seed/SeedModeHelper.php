@@ -9,7 +9,7 @@ class SeedModeHelper {
      * @return string
      */
     public static function getSeedMode() {
-        return config('seeding.current_mode');
+        return config('database.seeding.current_mode');
     }
 
     /**
@@ -17,7 +17,7 @@ class SeedModeHelper {
      * @return int
      */
     public static function getSeedModeIndex() {
-        return config('seeding.modes')[SeedModeHelper::getSeedMode()];
+        return config('database.seeding.modes')[SeedModeHelper::getSeedMode()];
     }
 
     /**
