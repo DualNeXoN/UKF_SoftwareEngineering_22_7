@@ -3,6 +3,10 @@ footer {
     padding: 10px;
 }
 
+.footer-row {
+    --bs-gutter-x: 0 !important;
+}
+
 .footer-row div {
     margin: 5px 0;
 }
