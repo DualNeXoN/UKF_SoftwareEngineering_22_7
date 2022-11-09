@@ -25,7 +25,6 @@
     </div>
 
         @if(Session::has('user'))
-
                 <?php $user = Session::get('user');?>
             <p class="h3">{{$user['name'].' '.$user['surname']}}</p>
 
@@ -64,21 +63,21 @@
                         <div class=" p-4 p-md-5">
                           <h3 class="fw-bold">Sign Up</h3>
                           <!-- Registration form -->
-                          <form>
-
+                          <form method="POST" action="{{route('register-user')}}">
+                              @csrf
                             <div class="row">
                               <div class="col-lg-6 mb-4">
 
                                 <div class="forms-inputs-lg mb-4">
                                 <span class="form-label" for="firstName">First Name</span>
-                                  <input type="text" id="firstName" class="form-control form-control-lg" />
+                                  <input type="text" name="name" class="form-control form-control-lg" />
                                 </div>
 
                               </div>
                               <div class="col-lg-6 mb-4">
                                 <div class="forms-inputs-lg mb-4">
                                     <span class="form-label" for="lasttName">Last Name</span>
-                                  <input type="text" id="lastName" class="form-control form-control-lg" />
+                                  <input type="text" name="surname"  class="form-control form-control-lg" />
                                 </div>
                               </div>
                             </div>
@@ -88,7 +87,7 @@
 
                                 <div class="forms-inputs mb-4">
                                 <span for="birthdayDate" class="form-label">Date of Birth</span>
-                                  <input type="date" class="form-control form-control-lg" id="birthdayDate" />
+                                  <input type="date" name="birth" class="form-control form-control-lg" id="birthdayDate" />
 
                                 </div>
 
@@ -96,7 +95,7 @@
                               <div class="col-md-6 mb-4">
                                 <div class="forms-inputs mb-4">
                                     <span class="form-label" for="homeTown">Hometown</span>
-                                  <input type="text" id="homeTown" class="form-control form-control-lg" />
+                                  <input type="text" name="town" class="form-control form-control-lg" />
                                 </div>
                               </div>
                             </div>
@@ -106,7 +105,7 @@
 
                                 <div class="forms-inputs mb-4">
                                     <span class="form-label" for="emailAddress">Email</span>
-                                  <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                                  <input type="email" name="email"  class="form-control form-control-lg" />
                                 </div>
 
                               </div>
@@ -114,7 +113,7 @@
 
                                 <div class="forms-inputs mb-4">
                                     <span class="form-label" for="aisNumber">Ais ID</span>
-                                  <input type="text" id="aisNumber" class="form-control form-control-lg" />
+                                  <input type="text" name="uid" class="form-control form-control-lg" />
                                 </div>
 
                               </div>
@@ -124,16 +123,16 @@
                                 <div class="col-md-6 mb-4 pb-2">
 
                                     <div class="forms-inputs mb-4">
-                                        <span class="form-label" for="passType">Password</span>
-                                      <input type="password" id="passType" class="form-control form-control-lg" />
+                                        <span class="form-label" for="password">Password</span>
+                                      <input type="password" name="pass" id="password" class="form-control form-control-lg" />
                                     </div>
 
                                   </div>
                                   <div class="col-md-6 mb-4 pb-2">
 
                                     <div class="forms-inputs mb-4">
-                                        <span class="form-label" for="confPassType">Confirm Password</span>
-                                      <input type="password" id="confPassType" class="form-control form-control-lg" />
+                                        <span class="form-label" for="confPassword">Confirm Password</span>
+                                      <input type="password" name="confpass" class="form-control form-control-lg" />
                                     </div>
                                   </div>
                                   <button class="btn btn-outline-dark btn-lg px-5" type="submit">Sign Up</button>
