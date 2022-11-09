@@ -27,18 +27,19 @@ class LoginController extends Controller
             $user = User::where('uid','=',$request->uid)->first();
 
             if($user){
-                if(Hash::check($request->getPassword(), $user->password));
+                if(Hash::check($request['password'], $user->password))
                 {
                     if(session()->has('user')){
                         return "U cant log in because another user id logged";
                     }else{
                         $result = $this->userDataStore($user->id);
                         session()->put('user',$result);
-                        return session()->get('user');
+                        return view('home');
                     }
-                }
+                }return back()->with('fail','Wrong password.');
             }
            return back()->with('fail','This user not exist.');
+
        }
        public function userDataStore($data)
        {
