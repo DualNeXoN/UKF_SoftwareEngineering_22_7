@@ -26,12 +26,15 @@
 
         @if(Session::has('user'))
                 <?php $user = Session::get('user');?>
-            <p class="h3">{{$user['name'].' '.$user['surname']}}</p>
+            <a href="/test" class="h3">{{$user['name'].' '.$user['surname']}}</a>
 
         @else
+
     <!-- Login form -->
             @if(Session::has('fail'))
-            <div class="alert alert-danger">{{Session::get('fail')}}} </div>
+            <div class="alert alert-danger">{{Session::get('fail')}} </div>
+            @elseif(Session::has('success'))
+                <div class="alert alert-success">{{Session::get('success')}} </div>
            @endif
     <form class="d-flex" method="POST" action="{{route('login-user')}}">
         @csrf
