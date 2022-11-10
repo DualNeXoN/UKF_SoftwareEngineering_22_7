@@ -83,6 +83,19 @@ return [
     */
 
     'locale' => 'en',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Application Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | The application available locales is array of valid locales on the server.
+    |
+    */
+    'available_locales' => [
+        'English' => 'en',
+        'Slovak' => 'sk',
+    ],
 
     /*
     |--------------------------------------------------------------------------

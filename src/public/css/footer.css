@@ -1,0 +1,17 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.footer-row {
+    --bs-gutter-x: 0 !important;
+}
+
+.footer-row div {
+    margin: 5px 0;
+}
