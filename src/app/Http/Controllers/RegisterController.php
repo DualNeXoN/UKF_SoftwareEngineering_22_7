@@ -13,21 +13,25 @@ class RegisterController extends Controller
     public function register(Request $request){
 
         $request->validate([
-            'uid'=>'required',
+            'uid'=>'required|numeric|digits:6',
             'pass'=>'required',
+            'name'=>'required',
+            'surname'=>'required',
+           // 'email'=>'required',
             'confpass'=>'required'
         ]);
 
-        if($request['pass'] == $request['confpass']){
-            $request['pass'] = $this->hashPassword($request['pass']);
+        if($request['pass'] != $request['confpass']){
+            return back()->with('fail','Passwords are not same');
         }
+        $request['pass'] = $this->hashPassword($request['pass']);
         if(User::where('uid',$request['uid'])->first()){
             return back()->with('fail','This user exist.');
         }
 
         $this->createUser($request);
         $this->createPerson($request);
-
+            return back()->with('success','Registration was success');
     }
     public function createUser($data){
         $user = new User();
@@ -41,7 +45,8 @@ class RegisterController extends Controller
         $person->general_user_id = User::where('uid',$data['uid'])->first()->id;
         $person->name = $data['name'];
         $person->surname = $data['surname'];
-        $person->birth_date = null;
+
+        $person->birth_date = $data['birth'];
         $person->address_id = null;
         $person ->save();
     }

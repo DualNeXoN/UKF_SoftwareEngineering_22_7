@@ -32,7 +32,7 @@ class LoginController extends Controller
                     if(session()->has('user')){
                         return "U cant log in because another user id logged";
                     }else{
-                        $result = $this->userDataStore($user->id);
+                        $result = $this->userDataStore($user);
                         session()->put('user',$result);
                         return view('home');
                     }

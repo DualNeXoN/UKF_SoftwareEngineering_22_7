@@ -8,16 +8,14 @@ use App\Models\User;
 use App\Models\Person;
 class UserController extends Controller
 {
-    public function storeUserData($id){
-                $user = User::find($id);
-                $person = Person::find($user->id);
+    public function storeUserData($user){
 
+                $person = Person::where('general_user_id',$user->id)->first();
                 $result = array(
-                    "id" => $person->id,
+                    "uid" => $user->uid,
                     "name" => $person->name,
                     "surname" => $person->surname,
                     "birth" => $person->birth_date,
-                    "uid" => $user->uid,
                     "password" => $user->password);
                 return $result;
     }
