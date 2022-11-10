@@ -12,6 +12,7 @@ h1 {
     overflow: visible;
     background-color: #ffffff;
 }
+
 .mw {
     overflow: hidden;
     font-size: 20px
@@ -23,80 +24,99 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .card-bg {
     background-color: #fff;
 }
+
 .card-pos {
     position: relative;
     top: 100px;
 }
+
 .forms-inputs {
     position: relative
 }
+
 .forms-inputs span {
     position: absolute;
-    top:-18px;
+    top: -18px;
     left: 10px;
     background-color: #fff;
     padding: 5px 10px;
-    font-size: 15px 
+    font-size: 15px
 }
+
 .forms-inputs input {
     height: 50px;
     border: 2px solid #eee
 }
+
 .forms-inputs input:focus {
     box-shadow: none;
     outline: none;
     border: 2px solid #000
 }
+
 .success-data {
     display: flex;
-    flex-direction: column 
+    flex-direction: column
 }
+
 .bxs-badge-check {
     font-size: 90px
 }
+
 #box-bg {
     position: relative;
     background-color: #002f4b;
-    padding: 10px ;
+    padding: 10px;
 }
+
 .img-pos {
     display: block;
     margin-left: auto;
 }
+
 .input-right {
     margin-left: auto;
 }
+
 .pos-input {
     float: right;
 }
+
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
     line-height: 2.15;
     padding-left: .75em;
     padding-right: .75em;
 }
+
 .card-registration .select-arrow {
     top: 13px;
 }
+
 .input-w {
     width: 200px;
 }
+
 .btwn {
     margin-left: 15px;
 }
+
 .btwn-2 {
     margin-left: 10px;
 }
+
 .pos-mar {
     margin-bottom: 100px;
     top: 100px;
 }
+
 .modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
