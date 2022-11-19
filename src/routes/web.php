@@ -41,3 +41,15 @@ Route::get('/students', function () {
 Route::get('/companies', function () {
     return view('companies');
 });
+
+Route::get('/admin/students', function () {
+    return view('adminstudents');
+});
+
+Route::get('/admin/companies', function () {
+    return view('admincompanies');
+});
+
+Route::get('/admin/departments', function () {
+    return view('admindepartments');
+});
