@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{asset("css/footer.css")}}">
     <link rel="stylesheet" href="{{asset("css/students.css")}}">
+    <link rel="stylesheet" href="{{asset("css/adminstudents.css")}}">
 </head>
 
 <body>
