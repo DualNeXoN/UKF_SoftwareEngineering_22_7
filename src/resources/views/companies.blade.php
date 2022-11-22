@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/companies.css') }}">
+@endsection
+
 @section('content')
     <section style="background-color: #eee;">
         <div class="container py-5">
@@ -16,9 +20,8 @@
                             <img src="{{ asset('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp') }}" alt="avatar" class="img-fluid" style="width: 150px;">
                             <h5 class="my-3">Contact person's name</h5>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-                                <button type="button" class="btn btn-outline-primary ms-1" data-bs-toggle="modal" data-bs-target="#internModal">Internship</button>
-                                <button type="button" class="btn btn-outline-primary ms-1">Logout</button>
+                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                <button type="button" class="btn btn-outline-primary ms-1 full-width">Show Contact Person</button>
                             </div>
                         </div>
                     </div>
@@ -27,6 +30,15 @@
                 <div class="col-lg-8">
                     <div class="card mb-4">
                         <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">ID</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">0</p>
+                                </div>
+                            </div>
+                            <hr>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <p class="mb-0">Company Name</p>
@@ -38,25 +50,17 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Company City</p>
+                                    <p class="mb-0">Company Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">City</p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <p class="mb-0">On (app) since</p>
-                                </div>
-                                <div class="col-sm-9">
-                                    <p class="text-muted mb-0">2022</p>
+                                    <p class="text-muted mb-0">Address</p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <!-- Contact person info -->
+                    <!-- (For now hidden)
                     <div class="col-lg-20 height">
                         <div class="card mb-4">
                             <div class="card-body">
@@ -99,6 +103,8 @@
                             </div>
                         </div>
                     </div>
+                    -->
+
                 </div>
             </div>
 

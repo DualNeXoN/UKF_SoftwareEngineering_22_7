@@ -1,0 +1,16 @@
+tbody tr:hover {
+    background-color: wheat;
+}
+
+.main-label {
+    font-size: 32px;
+    margin: 0 12px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.operation {
+    margin: 2px 0;
+}
