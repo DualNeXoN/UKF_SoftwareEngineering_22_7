@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md bg-nav">
+<nav class="navbar navbar-expand-lg bg-nav">
     <div class="container-fluid">
-        <a href="/"><img src="{{ asset('img/logo_pputils_t.png') }}" alt="" width="75" class="navbar-brand"></a>
+        <a href="/"><img src="{{ asset('img/logo_pputils_t.png') }}" alt="Logo" width="75" class="navbar-brand"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,17 +8,16 @@
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="navbar-brand nav-link mw mx-2" href="#">Help</a>
+                    <a class="navbar-brand nav-link mw mx-2" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="navbar-brand nav-link dropdown-toggle mw mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Internships
+                        Admin Panel
                     </a>
                     <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="navbar-brand dropdown-item" href="/students">Students</a>
-                        <a class="navbar-brand dropdown-item" href="/companies">Companies</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="navbar-brand dropdown-item" href="#">Departments</a>
+                        <a class="navbar-brand dropdown-item" href="/admin/users">Users</a>
+                        <a class="navbar-brand dropdown-item" href="/admin/companies">Companies</a>
+                        <a class="navbar-brand dropdown-item" href="/admin/departments">Departments</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -41,11 +40,11 @@
                 @csrf
                 <div class="forms-inputs collapse navbar-collapse" id="mynavbar">
                     <input type="text" name="uid" value="" placeholder="Ais ID" class="form-control-lg input-w" />
-                    <span class="text-danger">
-                        @error('uid')
+                    @error('uid')
+                        <span class="text-danger">
                             {{ $message }}}
-                        @enderror
-                    </span>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="forms-inputs btwn-2 collapse navbar-collapse" id="mynavbar">
@@ -58,96 +57,6 @@
                 </div>
                 <button class="btn-control btn btn-outline-dark btn-lg btwn-2 collapse navbar-collapse px-4" id="mynavbar" type="submit">Log in</button>
             </form>
-            <!-- Sign Up modal -->
-            <button class="btn btn-outline-dark btn-lg btwn px-4" data-bs-toggle="modal" data-bs-target="#registerModal" type="button">Sign up</button>
-    </div>
-    <div class="modal fade" id="registerModal">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="col-12">
-                        <div style="border-radius: 15px;">
-                            <div class="p-md-5 p-4">
-                                <h3 class="fw-bold">Sign Up</h3>
-                                <!-- Registration form -->
-                                <form method="POST" action="{{ route('register-user') }}">
-                                    @csrf
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-4">
-
-                                            <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="First Name" name="name" class="form-control form-control-lg" />
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="Last Name" name="surname" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="date" placeholder="Date of Birth" name="birth" class="form-control form-control-lg" id="birthdayDate" />
-
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Hometown" name="town" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4 pb-2">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="email" placeholder="Email" name="email" class="form-control form-control-lg" />
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-6 mb-4 pb-2">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Ais ID" name="uid" class="form-control form-control-lg" />
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4 pb-2">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="password" placeholder="Password" name="pass" id="password" class="form-control form-control-lg" />
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-6 mb-4 pb-2">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="password" placeholder="Confirm Password" name="confpass" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-outline-dark btn-lg px-5" type="submit">Sign
-                                            Up</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         @endif
+    </div>
 </nav>

@@ -42,8 +42,8 @@ Route::get('/companies', function () {
     return view('companies');
 });
 
-Route::get('/admin/students', function () {
-    return view('adminstudents');
+Route::get('/admin/users', function () {
+    return view('adminusers');
 });
 
 Route::get('/admin/companies', function () {
