@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.layout')
 
-    @include('partials/languageSwitcher')
+@section('content')
 
-    {{ __('test/translationTest.yes') }}<br>
-    {{ __('test/translationTest.no') }}<br>
-    @if (isset($param))
-        {{ trans_choice('test/translationTest.parameter', $param) }}
-    @endif
-    
-</html>
+<!-- Examples of using translations -->
+
+{{ __('test/translationTest.yes') }}<br>
+{{ __('test/translationTest.no') }}<br>
+@if (isset($param)) <!-- Is parameter set? (see web.php) If yes, then include this translation -->
+    {{ trans_choice('test/translationTest.parameter', $param) }}
+@endif
+
+@endsection

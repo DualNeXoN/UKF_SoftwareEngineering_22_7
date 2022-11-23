@@ -21,6 +21,9 @@
                         <a class="navbar-brand dropdown-item" href="#">Departments</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    @include('partials.languageSwitcher')
+                </li>
             </ul>
         </div>
 
