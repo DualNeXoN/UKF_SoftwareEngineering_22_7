@@ -1,11 +1,16 @@
 h3 {
     text-align: center;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
 
 h1 {
     text-align: center;
-    color: white
+    color: white;
+}
+
+p {
+    text-align: center;
+    color: #ffffff;
 }
 
 .bg-nav {
@@ -15,7 +20,12 @@ h1 {
 
 .mw {
     overflow: hidden;
-    font-size: 20px
+    font-size: 20px;
+}
+
+.img-sc {
+    width: 200px;
+    height: 300px;
 }
 
 body {
@@ -35,7 +45,7 @@ body {
 }
 
 .forms-inputs {
-    position: relative
+    position: relative;
 }
 
 .forms-inputs span {
@@ -44,38 +54,33 @@ body {
     left: 10px;
     background-color: #fff;
     padding: 5px 10px;
-    font-size: 15px
+    font-size: 15px;
 }
 
 .forms-inputs input {
     height: 50px;
-    border: 2px solid #eee
+    border: 2px solid #eee;
 }
 
 .forms-inputs input:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #000
+    border: 2px solid #000;
 }
 
 .success-data {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .bxs-badge-check {
-    font-size: 90px
+    font-size: 90px;
 }
 
 #box-bg {
     position: relative;
     background-color: #002f4b;
     padding: 10px;
-}
-
-.img-pos {
-    display: block;
-    margin-left: auto;
 }
 
 .input-right {
@@ -89,8 +94,8 @@ body {
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
     line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 }
 
 .card-registration .select-arrow {
@@ -119,4 +124,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.bg-home {
+    background-color: #002f4b;
 }
