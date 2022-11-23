@@ -20,7 +20,7 @@
                             <img src="{{ asset('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp') }}" alt="avatar" class="img-fluid" style="width: 150px;">
                             <h5 class="my-3">Contact person's name</h5>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">Edit</button>
                                 <button type="button" class="btn btn-outline-primary ms-1 full-width">Show Contact Person</button>
                             </div>
                         </div>
@@ -61,55 +61,55 @@
                     </div>
                     <!-- Contact person info -->
                     <!-- (For now hidden)
-                    <div class="col-lg-20 height">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0">Contact name</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="text-muted mb-0">Name</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0">Contact surname</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="text-muted mb-0">Last name</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0">Contact E-mail</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="text-muted mb-0">email@email.com</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0">Address</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="text-muted mb-0">Adress</p>
+                                    <div class="col-lg-20 height">
+                                        <div class="card mb-4">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="mb-0">Contact name</p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Name</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="mb-0">Contact surname</p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Last name</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="mb-0">Contact E-mail</p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">email@email.com</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="mb-0">Address</p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Adress</p>
 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
+                                    -->
 
                 </div>
             </div>
 
             <!-- Edit button Modal -->
-            <div class="modal fade" id="editModal">
+            <div class="modal fade" id="editeModal">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <!-- Modal Header -->

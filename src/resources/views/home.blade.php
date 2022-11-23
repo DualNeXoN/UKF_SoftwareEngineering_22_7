@@ -19,7 +19,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid img-sc" src="{{ asset('img/users.png') }}" alt="..." />
+                        <img class="img-fluid" src="{{ asset('img/users.png') }}" alt="..." />
                     </div>
                 </div>
                 <!-- Item 2-->
@@ -42,35 +42,35 @@
                 </div>
                 <!-- Item 4-->
                 <!-- hidden for now
-                             <div class="col-md-6 col-lg-4 mb-lg-0 mb-5">
-                                 <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                          <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                        </div>
-                                      <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                                     </div>
-                                   </div>
-                             <!-- Item 5-->
-                <!-- hidden for now
-                                 <div class="col-md-6 col-lg-4 mb-md-0 mb-5">
-                                   <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                     <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                       </div>
-                                     <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
+                                         <div class="col-md-6 col-lg-4 mb-lg-0 mb-5">
+                                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                                                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                      <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                                    </div>
+                                                  <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
+                                                 </div>
                                                </div>
-                                        </div>
-                               <!-- Item 6-->
+                                         <!-- Item 5-->
                 <!-- hidden for now
-                          <div class="col-md-6 col-lg-4">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                           <    div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                         </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                          </div>
-                           </div>
-                           -->
+                                             <div class="col-md-6 col-lg-4 mb-md-0 mb-5">
+                                               <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                                                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                                   </div>
+                                                 <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
+                                                           </div>
+                                                    </div>
+                                           <!-- Item 6-->
+                <!-- hidden for now
+                                      <div class="col-md-6 col-lg-4">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                                          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                       <    div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                                     </div>
+                                                <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+                                      </div>
+                                       </div>
+                                       -->
             </div>
         </div>
     </section>
