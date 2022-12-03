@@ -38,7 +38,7 @@ class AdminController extends Controller
     //user password hash reset
     function resetPassword(){
         $id = Request::input('id');
-        $hashed_random_password = Hash::make(Str::random(12));
+        $hashed_random_password = Hash::make(123);
         User::where('id',$id)->first()->update(['password'=>$hashed_random_password]);
         return back();
 
