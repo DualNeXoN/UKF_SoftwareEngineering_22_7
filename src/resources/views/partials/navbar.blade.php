@@ -32,7 +32,7 @@
             </div>
         </div>
         @if (Session::has('user'))
-            <?php $user = Session::get('user')[0]; ?>
+            <?php $user = Session::get('user'); ?>
             <a href="/students" class="h3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
         @else
             <!-- Login form -->
