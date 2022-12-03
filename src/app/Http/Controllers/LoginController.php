@@ -32,9 +32,9 @@ class LoginController extends Controller
                     if(session()->has('user')){
                         return "U cant log in because another user id logged";
                     }else{
-                        $result = $this->userDataStore($user);
+                        $result = $this->userDataStore($user->id);
                         session()->put('user',$result);
-                        return view('home');
+                        return  view('home');
                     }
                 }return back()->with('fail','Wrong password.');
             }
