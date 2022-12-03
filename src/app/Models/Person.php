@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
-
     use HasFactory;
 
     protected $table = 'person';
 
     protected $guarded = [];
 
+    protected function address(){
+        $this->hasOne(Address::class);
+    }
 }

@@ -1,23 +1,32 @@
 <?php
 
 namespace App\Http\Controllers;
-use Database\Seeders\PersonSeeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Person;
 class UserController extends Controller
 {
     public function storeUserData($user){
-
-                $person = Person::where('general_user_id',$user->id)->first();
-                $result = array(
-                    "uid" => $user->uid,
-                    "name" => $person->name,
-                    "surname" => $person->surname,
-                    "birth" => $person->birth_date,
-                    "password" => $user->password);
+                $result = $this->findUser($user);
                 return $result;
     }
+
+    public function getAllUsers(){
+        $data = User::join('person','person.general_user_id' , '=', 'general_user.id')
+            ->join('role','role.id','=','general_user.role_id')
+            ->select('general_user.*','person.*','role.name as role',)
+            ->get();
+        return $data;
+    }
+    public function findUser($id){
+         $result = User::find($id)->join('person','person.general_user_id' , '=', 'general_user.id')
+             ->join('role','role.id','=','general_user.role_id')
+             ->select('general_user.*','person.*','role.name as role',)
+             ->get();
+         return $result;
+    }
+
+    public function update(Request $request){
+        $user = User::where('uid',$request['uid'])->first()->update([]);
+    }
+
 }
 

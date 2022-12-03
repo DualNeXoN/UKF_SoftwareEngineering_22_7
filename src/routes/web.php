@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CompanyController;
 Route::get('/', function () {
     return view('home');
 });
@@ -25,26 +25,20 @@ Route::get('/translations/{param}', function ($param) {
 });
 //End of: Test translations
 
-//Route::get('/login',[LoginController::class,'login']);
+
 Route::post('/login',[LoginController::class,'loginUser'])->name('login-user');
-
 Route::get('/logout',[LoginController::class,'Logout']);
-
 Route::post('register',[RegisterController::class,'register'])->name('register-user');
-Route::get('/test',function (){
-   return view('testSubPage');
-});
+
+//End of: Auth System
+
 Route::get('/students', function () {
     return view('students');
 });
 
-Route::get('/companies', function () {
-    return view('companies');
-});
 
-Route::get('/admin/users', function () {
-    return view('adminusers');
-});
+
+
 
 Route::get('/admin/companies', function () {
     return view('admincompanies');
@@ -53,3 +47,11 @@ Route::get('/admin/companies', function () {
 Route::get('/admin/departments', function () {
     return view('admindepartments');
 });
+
+Route::delete('delete-user/{user}',[AdminController::class,'removeUser']);
+Route::post('admin/users/reset-password', [AdminController::class,'resetPassword']);
+Route::get('/admin/users', [AdminController::class,'getUsers']);
+Route::get('/{id}', [CompanyController::class,'getCompany']);
+Route::get('/companies', [CompanyController::class,'getAllCompanies']);
+
+

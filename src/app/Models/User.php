@@ -12,6 +12,9 @@ class User extends Model {
     public function person(){
         return $this->belongsTo('App\Models\Person');
     }
+    public function role(){
+        return $this->hasOne('App\Models\Role');
+    }
 
     protected $table = 'general_user';
 
