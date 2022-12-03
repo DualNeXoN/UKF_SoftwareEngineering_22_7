@@ -6,7 +6,7 @@
 
 @section('content')
     @if (Session::has('user'))
-            <?php $user = Session::get('user')[0]; ?>
+            <?php $user = Session::get('user'); ?>
 
     <section style="background-color: #eee;">
         <div class="container py-5">

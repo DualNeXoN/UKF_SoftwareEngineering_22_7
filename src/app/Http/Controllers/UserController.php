@@ -17,10 +17,9 @@ class UserController extends Controller
         return $data;
     }
     public function findUser($id){
-         $result = User::find($id)->join('person','person.general_user_id' , '=', 'general_user.id')
+         $result = User::select('general_user.*','person.*','role.name as role',)->join('person','person.general_user_id' , '=', 'general_user.id')
              ->join('role','role.id','=','general_user.role_id')
-             ->select('general_user.*','person.*','role.name as role',)
-             ->get();
+             ->find($id);
          return $result;
     }
 
