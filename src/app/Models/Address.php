@@ -14,6 +14,6 @@ class Address extends Model {
     protected $guarded = [];
 
     public function town() {
-        return $this->belongsTo(Town::class);
+        return $this->belongsTo(Town::class, 'town_id', 'id')->get()->first();
     }
 }

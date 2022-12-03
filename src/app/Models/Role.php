@@ -16,7 +16,7 @@ class Role extends Model
     const ADMIN_ROLE_NAME = 'Admin';
     const STUDENT_ROLE_NAME = 'Student';
 
-    protected function user(){
-        $this->hasMany('App\Models\User');
+    protected function user() {
+        return $this->hasMany(User::class)->get();
     }
 }

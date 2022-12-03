@@ -9,13 +9,6 @@ class User extends Model {
 
     use HasFactory;
 
-    public function person(){
-        return $this->belongsTo('App\Models\Person');
-    }
-    public function role(){
-        return $this->hasOne('App\Models\Role');
-    }
-
     protected $table = 'general_user';
 
     protected $fillable = [
@@ -27,5 +20,13 @@ class User extends Model {
     protected $hidden = [
         'password',
     ];
+
+    public function person() {
+        return $this->belongsTo(Person::class)->get()->first();
+    }
+    
+    public function role() {
+        return $this->hasOne(Role::class, 'id', 'role_id')->get()->first();
+    }
 
 }

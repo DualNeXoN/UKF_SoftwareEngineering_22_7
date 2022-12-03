@@ -11,11 +11,11 @@ class Town extends Model {
     protected $guarded = [];
 
     public function country() {
-        return $this->belongsTo(Country::class);
+        return $this->belongsTo(Country::class, 'country_id', 'id')->get()->first();
     }
 
     public function addresses() {
-        return $this->hasMany(Address::class);
+        return $this->hasMany(Address::class)->get();
     }
 
 }

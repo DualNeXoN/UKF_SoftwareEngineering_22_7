@@ -11,6 +11,6 @@ class Country extends Model {
     protected $guarded = [];
 
     public function towns() {
-        return $this->hasMany(Town::class);
+        return $this->hasMany(Town::class)->get();
     }
 }
