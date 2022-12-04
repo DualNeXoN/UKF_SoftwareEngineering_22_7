@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('student_id')->nullable(false);
             $table->unsignedBigInteger('professional_practice_id')->nullable(false);
-            $table->unsignedBigInteger('contract_type_id')->nullable(false);
             $table->unsignedBigInteger('academic_year_id')->nullable(false);
             $table->unsignedBigInteger('practice_state_id')->nullable(false);
             $table->string('grade', 2)->nullable(true);
@@ -28,7 +27,6 @@ return new class extends Migration
 
             $table->foreign('student_id')->references('id')->on('person');
             $table->foreign('professional_practice_id')->references('id')->on('professional_practice');
-            $table->foreign('contract_type_id')->references('id')->on('contract_type');
             $table->foreign('academic_year_id')->references('id')->on('academic_year');
             $table->foreign('practice_state_id')->references('id')->on('practice_state');
         });
