@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\Graph\GraphHelper;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -58,3 +59,11 @@ Route::get('/companies', [CompanyController::class,'getAllCompanies']);
 
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
 Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
+
+Route::get('/graph/show', function () {
+    return view('graph');
+});
+
+Route::get('/graph/data', function () {
+    return GraphHelper::staticData();
+});
