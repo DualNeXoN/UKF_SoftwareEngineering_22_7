@@ -34,6 +34,9 @@
                         </div>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active mw mx-2" href="/company/person">Company Person</a>
+                    </li>
+                    <li class="nav-item">
                         @include('partials.languageSwitcher')
                     </li>
                 </ul>
@@ -41,7 +44,7 @@
         </div>
         @if (Session::has('user'))
             <?php $user = Session::get('user'); ?>
-            <a href="/students" class="h3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
+            <a href="/students" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
         @else
             <!-- Login form -->
             @if (Session::has('fail'))

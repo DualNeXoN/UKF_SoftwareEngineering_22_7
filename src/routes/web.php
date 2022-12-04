@@ -51,6 +51,10 @@ Route::get('/admin/departments', function () {
     return view('admindepartments');
 });
 
+Route::get('/company/person', function () {
+    return view('companyperson');
+});
+
 Route::delete('delete-user/{user}',[AdminController::class,'removeUser']);
 Route::post('admin/users/reset-password', [AdminController::class,'resetPassword']);
 Route::get('/admin/users', [AdminController::class,'getUsers']);

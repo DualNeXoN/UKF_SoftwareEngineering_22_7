@@ -1,5 +1,11 @@
 @extends('layouts.layout')
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+@endsection
+
 @section('content')
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
@@ -40,37 +46,6 @@
                         <img class="img-fluid" src="{{ asset('img/department.png') }}" alt="..." />
                     </div>
                 </div>
-                <!-- Item 4-->
-                <!-- hidden for now
-                                                                                                     <div class="col-md-6 col-lg-4 mb-lg-0 mb-5">
-                                                                                                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                                                                                                              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                                                                                  <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                                                                                                </div>
-                                                                                                              <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                                                                                                             </div>
-                                                                                                           </div>
-                                                                                                     <!-- Item 5-->
-                <!-- hidden for now
-                                                                                                         <div class="col-md-6 col-lg-4 mb-md-0 mb-5">
-                                                                                                           <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                                                                                                              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                                                                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                                                                                               </div>
-                                                                                                             <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                                                                                                                       </div>
-                                                                                                                </div>
-                                                                                                       <!-- Item 6-->
-                <!-- hidden for now
-                                                                                                  <div class="col-md-6 col-lg-4">
-                                                                                                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                                                                                                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                                                                                   <    div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                                                                                                 </div>
-                                                                                                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                                                                                                  </div>
-                                                                                                   </div>
-                                                                                                   -->
             </div>
         </div>
     </section>
