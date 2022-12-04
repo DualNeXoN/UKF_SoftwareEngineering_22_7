@@ -17,11 +17,6 @@
                 <button class="btn btn-success full-width" data-bs-toggle="modal" data-bs-target="#addModal" type="button">Add Profesional Practice
                 </button>
             </div>
-            <div class="col-8 col-md-6 col-lg-4 col-xl-3">
-                <!-- Show modal button -->
-                <button class="btn btn-success full-width" data-bs-toggle="modal" data-bs-target="#showModal" type="button">Show Profesional Practice
-                </button>
-            </div>
         </div>
         <div class="row">
             <div class="col">
