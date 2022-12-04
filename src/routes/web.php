@@ -63,6 +63,7 @@ Route::get('/companies', [CompanyController::class,'getAllCompanies']);
 
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
 Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
+Route::get('practice/profile/{id}',[PracticeController::class,'getPractice'])->name('practice-profile');;
 
 Route::get('/graph/show', function () {
     return view('graph');

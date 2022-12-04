@@ -30,8 +30,8 @@
                             @foreach($practices as $practice)
 
                                 <tr>
-                                    <td scope="row">{{ $practice->label }}</td>
-                                    <td>{{ $practice->company()->name }}</td>
+                                    <td scope="row" href="">{{ $practice->label }}</td>
+                                    <td >{{ $practice->company()->name }}</td>
                                     <td>{{ $practice->contractType()->contract }}</td>
                                     <td>
                                         <div class="row">
@@ -58,7 +58,7 @@
                                             </div>
                                             @endif
                                             <div class="col-12 col-md-6 col-xl-4 operation">
-                                                <form method="post" action="#">
+                                                <form method="GET" action="{{ route('practice-profile', [$practice->id]) }}">
                                                     <button type="submit" class="btn btn-primary full-width">Details</button>
                                                 </form>
                                             </div>
