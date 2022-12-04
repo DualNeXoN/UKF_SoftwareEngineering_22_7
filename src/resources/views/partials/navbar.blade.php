@@ -25,6 +25,14 @@
                             <a class="navbar-brand dropdown-item" href="/admin/departments">Departments</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdownPractice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Student Practices
+                        </a>
+                        <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
+                            <a class="navbar-brand dropdown-item" href="/practice/list">Show all practices</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         @include('partials.languageSwitcher')
                     </li>

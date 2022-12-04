@@ -5,6 +5,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\PracticeController;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -54,4 +56,5 @@ Route::get('/admin/users', [AdminController::class,'getUsers']);
 Route::get('/{id}', [CompanyController::class,'getCompany']);
 Route::get('/companies', [CompanyController::class,'getAllCompanies']);
 
-
+Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
+Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
