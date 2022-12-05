@@ -53,7 +53,7 @@
     <section class="page-section bg-primary mb-0 text-white" id="about">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-uppercase text-center text-white">About</h2>
+            <h2 class="page-section-heading text-uppercase text-center text-white">{{__("translation.about")}}</h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -63,10 +63,10 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ms-auto">
-                    <p class="lead">We are Lucky Seven and this is our project PPUtils.</p>
+                    <p class="lead">{{__("translation.home about 1")}}</p>
                 </div>
                 <div class="col-lg-4 me-auto">
-                    <p class="lead">We manage students, companies and department.</p>
+                    <p class="lead">{{__("translation.home about 2")}}</p>
                 </div>
             </div>
             <!-- About Section Button-->

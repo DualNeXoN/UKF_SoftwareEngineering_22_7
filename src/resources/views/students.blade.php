@@ -19,8 +19,8 @@
                             <h5 class="my-3">{{$user->name.' '.$user->surname}}</h5>
                             <p class="text-muted mb-1">{{$user->role}}</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary full-width">Edit</button>
-                                <button type="button" class="btn btn-outline-primary ms-1 full-width">Professional Practices</button>
+                                <button type="button" class="btn btn-primary full-width">{{__("translation.edit")}}</button>
+                                <button type="button" class="btn btn-outline-primary ms-1 full-width">{{__("translation.practice")}}</button>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Full Name</p>
+                                    <p class="mb-0">{{__("translation.name_full")}}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">{{$user->name.' '.$user->surname}}</p>
@@ -48,7 +48,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Date of Birth</p>
+                                    <p class="mb-0">{{__("translation.date of birth")}}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">{{$user->birth_date}}</p>
@@ -57,7 +57,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Address</p>
+                                    <p class="mb-0">{{__("translation.adress")}}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0"></p>
@@ -90,7 +90,7 @@
                             <div class="col-12">
                                 <div style="border-radius: 15px;">
                                     <div class="p-md-5 p-4">
-                                        <h3 class="fw-bold">Edit Company profile</h3>
+                                        <h3 class="fw-bold">{{__("translation.edit company profile")}}</h3>
                                         <!-- Edit form -->
                                         <form>
                                             <div class="row">
@@ -105,7 +105,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3 class="fw-bold">Edit Contact profile</h3>
+                                            <h3 class="fw-bold">{{__("translation.edit contact profile")}}</h3>
                                             <div class="row">
                                                 <div class="col-md-6 mb-4">
 
@@ -133,7 +133,7 @@
                                                 </div>
                                             </div>
                                             <div style="margin-left: 270px">
-                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">Edit</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">{{__("translation.edit")}}</button>
                                             </div>
 
                                     </form>

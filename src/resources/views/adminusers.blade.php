@@ -8,13 +8,13 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col main-label">
-                Admin Panel Users
+                {{__("translation.admin panel users")}}
             </div>
         </div>
         <div class="row justify-content-center text-center">
             <div class="col-8 col-md-6 col-lg-4 col-xl-3">
                 <!-- Add User modal button switcher -->
-                <button class="btn btn-success full-width" data-bs-toggle="modal" data-bs-target="#addUserModal" type="button">Create User</button>
+                <button class="btn btn-success full-width" data-bs-toggle="modal" data-bs-target="#addUserModal" type="button">{{__("translation.create user")}}</button>
             </div>
         </div>
         <div class="row">
@@ -24,11 +24,11 @@
                         <thead>
                         <tr>
                             <th scope="col">UID</th>
-                            <th scope="col">Role</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Birth Date</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">{{__("translation.role")}}</th>
+                            <th scope="col">{{__("translation.name_person")}}</th>
+                            <th scope="col">{{__("translation.date of birth")}}</th>
+                            <th scope="col">{{__("translation.adress")}}</th>
+                            <th scope="col">{{__("translation.actions")}}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,13 +45,13 @@
                                             <div class="col-12 col-xl-4 operation">
                                                 <form method="POST" action={{url('admin/users/reset-password')}}>
                                                     @csrf
-                                                    <button type="submit" class="btn btn-primary full-width">Reset Password</button>
+                                                    <button type="submit" class="btn btn-primary full-width">{{__("translation.reset password")}}</button>
                                                     <input type="hidden" name="id" value= {{$row->id}}>
                                                 </form>
                                             </div>
                                             <div class="col-12 col-xl-4 operation">
                                                 <form method="post">
-                                                    <button type="button" class="btn btn-primary full-width">Edit
+                                                    <button type="button" class="btn btn-primary full-width">{{__("translation.edit")}}
                                                     </button>
                                                 </form>
                                             </div>
@@ -59,7 +59,7 @@
                                                 <form method="post" action="{{url('/delete-user/'.$row->id)}}">
                                                     @method('delete')
                                                     @csrf
-                                                    <button type="submit" class="btn btn-danger full-width">Delete</button>
+                                                    <button type="submit" class="btn btn-danger full-width">{{__("translation.delete")}}</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -86,7 +86,7 @@
                     <div class="col-12">
                         <div style="border-radius: 15px;">
                             <div class="p-md-5 p-4">
-                                <h3 class="fw-bold">Add User</h3>
+                                <h3 class="fw-bold">{{__("translation.add user")}}</h3>
                                 <!-- Add User Form -->
                                 <form method="POST" action="{{ route('register-user') }}">
                                     @csrf
@@ -94,42 +94,42 @@
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="number" placeholder="UID (6-digit)" min="100000" max="999999" name="uid" class="form-control form-control-lg"/>
+                                                <input type="number" placeholder={{__("translation.uid")}} min="100000" max="999999" name="uid" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
                                                 <select class="form-select form-select-lg" name="role">
-                                                    <option value="1">Administrator</option>
-                                                    <option value="2">Student</option>
+                                                    <option value="1">{{__("translation.administrator")}}</option>
+                                                    <option value="2">{{__("translation.student")}}</option>
                                                 </select>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="First Name" name="firstName" maxlength="45" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder={{__("translation.name_first")}} name="First Name" maxlength="45" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="Last Name" name="lastName" maxlength="45" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder={{__("translation.name_last")}} name="Last Name" maxlength="45" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 mb-4">
                                             <div class="forms-inputs mb-4">
-                                                <input type="date" placeholder="Date of Birth" name="birth" class="form-control form-control-lg" id="birthdayDate"/>
+                                                <input type="date" placeholder={{__("translation.birth date")}} name="birth" class="form-control form-control-lg" id="birthdayDate"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
                                                 <select class="form-select form-select-lg" name="country">
-                                                    <option value="1">Slovakia</option>
-                                                    <option value="2">Czechia</option>
+                                                    <option value="1">{{__("translation.slovakia")}}</option>
+                                                    <option value="2">{{__("translation.czechia")}}</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -137,27 +137,27 @@
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
                                                 <select class="form-select form-select-lg" name="town">
-                                                    <option value="1">Bratislava</option>
-                                                    <option value="2">Nitra</option>
+                                                    <option value="1">{{__("translation.bratislava")}}</option>
+                                                    <option value="2">{{__("translation.nitra")}}</option>
                                                 </select>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Street" name="street" maxlength="96" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder={{__("translation.street")}} name="street" maxlength="96" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Number" name="number" maxlength="20" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder={{__("translation.number_home")}} name="number" maxlength="20" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Postcode" name="postcode" maxlength="10" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder={{__("translation.postcode")}} name="postcode" maxlength="10" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
@@ -166,7 +166,7 @@
                                     <div class="row justify-content-center">
 
                                         <div class="col-lg-6 col-md-8 mb-4 text-center">
-                                            <button class="btn btn-outline-dark btn-lg px-5" type="submit">Add User</button>
+                                            <button class="btn btn-outline-dark btn-lg px-5" type="submit">{{__("translation.add user")}}</button>
                                         </div>
 
                                     </div>

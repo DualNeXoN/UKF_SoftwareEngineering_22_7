@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col main-label">
-                Admin Panel Departments
+                {{__("translation.admin panel departs")}}
             </div>
         </div>
         <div class="row">
@@ -18,9 +18,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Head</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">{{__("translation.name_comp")}} </th>
+                                <th scope="col">{{__("translation.head")}}</th>
+                                <th scope="col">{{__("translation.actions")}}</th>
                             </tr>
                         </thead>
                         <tbody>
