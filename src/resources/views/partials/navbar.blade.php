@@ -73,8 +73,7 @@
                     </span>
                 </div>
                 <button class="btn-control btn btn-outline-dark btwn-2" type="submit">Login</button>
-                <button class="btn-control btn btn-outline-dark btn-lg btwn-2 collapse navbar-collapse px-4" id="mynavbar" type="submit">Log in</button>
-                <button class="btn-control btn btn-outline-dark btn-lg btwn-2 collapse navbar-collapse px-4" id="mynavbar" type="submit">Log out</button>
+                <button class="btn-control btn btn-outline-dark btn-lg btwn-2 collapse navbar-collapse px-4" id="mynavbar" type="submit">Logout</button>
             </form>
         @endif
     </div>
