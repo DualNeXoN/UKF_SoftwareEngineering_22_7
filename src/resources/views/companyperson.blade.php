@@ -26,7 +26,7 @@
                             <tr>
                                 <th scope="col">Label</th>
                                 <th scope="col">Study Program</th>
-                                <th scope="col">Abbreviation</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -82,18 +82,20 @@
                                         </div>
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="Study Program" name="studyProgram" class="form-control form-control-lg" />
+                                                <select class="form-select form-select-lg mb-4" aria-label=".form-select-lg example">
+                                                    <option selected>Study Program</option>
+                                                    <option value="1">Aplikovana Informatika</option>
+                                                    <option value="2">AI-bc</option>
+                                                    <option value="3">AI-m</option>
+                                                  </select>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6 mb-4">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Abbreviation" name="abbreviation" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
+                                            <div class="mb-6">
+                                                <textarea class="form-control form-control-lg mb-4" placeholder="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                              </div>
                                     </div>
 
                                     <div class="row">
@@ -133,20 +135,22 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="Study Program" name="studyProgram" class="form-control form-control-lg" />
+                                        <div class="col-lg-6">
+                                            <div class="forms-inputs-lg">
+                                                <select class="form-select form-select-lg mb-4" aria-label=".form-select-lg example">
+                                                    <option selected>Study Program</option>
+                                                    <option value="1">Aplikovana Informatika</option>
+                                                    <option value="2">AI-bc</option>
+                                                    <option value="3">Three</option>
+                                                  </select>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6 mb-4">
-
-                                            <div class="forms-inputs mb-4">
-                                                <input type="text" placeholder="Abbreviation" name="abbreviation" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
+                                            <div class="mb-6">
+                                                <textarea class="form-control form-control-lg mb-4" placeholder="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                              </div>
                                     </div>
 
                                     <div class="row">
