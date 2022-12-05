@@ -69,39 +69,53 @@
                     <div class="col-12">
                         <div style="border-radius: 15px;">
                             <div class="p-md-5 p-4">
-                                <h3 class="fw-bold">Add Professional practices</h3>
+                                <h3 class="fw-bold">Add Professional Practice</h3>
                                 <!-- Add form -->
                                 <form>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-4">
 
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 mb-4">
                                             <div class="forms-inputs-lg mb-4">
                                                 <input type="text" placeholder="Label" name="label" class="form-control form-control-lg" />
                                             </div>
-
                                         </div>
-                                        <div class="col-lg-6 mb-4">
+                                    </div>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <select class="form-select form-select-lg mb-4" aria-label=".form-select-lg example">
-                                                    <option selected>Study Program</option>
-                                                    <option value="1">Aplikovana Informatika</option>
-                                                    <option value="2">AI-bc</option>
-                                                    <option value="3">AI-m</option>
-                                                  </select>
+                                                <textarea type="text" placeholder="Description" name="description" class="form-control form-control-lg input-description"></textarea>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                            <div class="mb-6">
-                                                <textarea class="form-control form-control-lg mb-4" placeholder="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                              </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="forms-inputs-lg mb-4">
+                                                <select class="form-select form-select-lg" name="studyProgram">
+                                                    <option value="1">Study Programme 1</option>
+                                                    <option value="2">Study Programme 2</option>
+                                                    <option value="N">Study Programme N</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="forms-inputs-lg mb-4">
+                                                <select class="form-select form-select-lg" name="contractType">
+                                                    <option value="1">Contract Type 1</option>
+                                                    <option value="2">Contract Type 2</option>
+                                                    <option value="N">Contract Type N</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="row">
-                                        <button class="btn btn-outline-dark btn-lg px-5" type="submit">Add
-                                        </button>
+                                    <div class="row justify-content-center">
+                                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                                            <button class="btn btn-outline-dark btn-lg full-width" type="submit">Add</button>
+                                        </div>
                                     </div>
+
                                 </form>
                             </div>
                         </div>
@@ -124,39 +138,53 @@
                     <div class="col-12">
                         <div style="border-radius: 15px;">
                             <div class="p-md-5 p-4">
-                                <h3 class="fw-bold">Edit Professional practices</h3>
+                                <h3 class="fw-bold">Edit Professional Practice</h3>
                                 <!-- Edit form -->
                                 <form>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-4">
 
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 mb-4">
                                             <div class="forms-inputs-lg mb-4">
                                                 <input type="text" placeholder="Label" name="label" class="form-control form-control-lg" />
                                             </div>
-
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="forms-inputs-lg">
-                                                <select class="form-select form-select-lg mb-4" aria-label=".form-select-lg example">
-                                                    <option selected>Study Program</option>
-                                                    <option value="1">Aplikovana Informatika</option>
-                                                    <option value="2">AI-bc</option>
-                                                    <option value="3">Three</option>
-                                                  </select>
+                                    </div>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8 mb-4">
+                                            <div class="forms-inputs-lg mb-4">
+                                                <textarea type="text" placeholder="Description" name="description" class="form-control form-control-lg input-description"></textarea>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                            <div class="mb-6">
-                                                <textarea class="form-control form-control-lg mb-4" placeholder="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                              </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="forms-inputs-lg mb-4">
+                                                <select class="form-select form-select-lg" name="studyProgram">
+                                                    <option value="1">Study Programme 1</option>
+                                                    <option value="2">Study Programme 2</option>
+                                                    <option value="N">Study Programme N</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <div class="forms-inputs-lg mb-4">
+                                                <select class="form-select form-select-lg" name="contractType">
+                                                    <option value="1">Contract Type 1</option>
+                                                    <option value="2">Contract Type 2</option>
+                                                    <option value="N">Contract Type N</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="row">
-                                        <button class="btn btn-outline-dark btn-lg px-5" type="submit">Edit
-                                        </button>
+                                    <div class="row justify-content-center">
+                                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                                            <button class="btn btn-outline-dark btn-lg full-width" type="submit">Edit</button>
+                                        </div>
                                     </div>
+
                                 </form>
                             </div>
                         </div>

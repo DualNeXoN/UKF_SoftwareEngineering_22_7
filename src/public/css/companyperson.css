@@ -13,3 +13,7 @@ tbody tr:hover {
 .operation {
     margin: 2px 0;
 }
+
+.input-description {
+    height: 120px;
+}
