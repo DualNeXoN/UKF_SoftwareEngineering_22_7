@@ -14,3 +14,17 @@ tbody tr:hover {
 .operation {
     margin: 2px 0;
 }
+
+.practice-label {
+    font-size: 24px;
+}
+
+p.scroll {
+    height: 110px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div.card {
+    border-width: 3px;
+}
