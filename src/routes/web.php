@@ -51,15 +51,18 @@ Route::get('/admin/departments', function () {
     return view('admindepartments');
 });
 
-Route::get('/company/person', function () {
-    return view('companyperson');
-});
+
+Route::get('/company/person',[CompanyController::class,'companyPractices']);
+Route::post('company/person/add-practice',[CompanyController::class,'addPractice'])->name('addPractice');
+Route::post('company/person/update-practice',[CompanyController::class,'updatePractice'])->name('updatePractice');
+Route::delete('/company/person/delete-practice/{id}',[CompanyController::class,'deletePractice']);
+//Route::get('/{id}', [CompanyController::class,'getCompany']);
+//Route::get('/companies', [CompanyController::class,'getAllCompanies']);
 
 Route::delete('delete-user/{user}',[AdminController::class,'removeUser']);
 Route::post('admin/users/reset-password', [AdminController::class,'resetPassword']);
 Route::get('/admin/users', [AdminController::class,'getUsers']);
-Route::get('/{id}', [CompanyController::class,'getCompany']);
-Route::get('/companies', [CompanyController::class,'getAllCompanies']);
+
 
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
 Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
