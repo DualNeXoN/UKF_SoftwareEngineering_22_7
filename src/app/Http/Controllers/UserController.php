@@ -1,6 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
+use App\Models\Person;
 use App\Models\User;
 class UserController extends Controller
 {
@@ -8,7 +8,6 @@ class UserController extends Controller
                 $result = $this->findUser($user);
                 return $result;
     }
-
     public function getAllUsers(){
         $data = User::join('person','person.general_user_id' , '=', 'general_user.id')
             ->join('role','role.id','=','general_user.role_id')
@@ -22,10 +21,12 @@ class UserController extends Controller
              ->find($id);
          return $result;
     }
-
+    function userProfile($id){
+        $user = Person::where('id',$id)->first();
+        return view('students')->with('user',$user);
+    }
     public function update(Request $request){
         $user = User::where('uid',$request['uid'])->first()->update([]);
     }
-
 }
 

@@ -6,7 +6,7 @@
 
 @section('content')
     @if (Session::has('user'))
-            <?php $user = Session::get('user'); ?>
+
 
     <section style="background-color: #eee;">
         <div class="container py-5">
@@ -60,7 +60,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0"></p>
+                                    <p class="text-muted mb-0">{{$user->address()->number." ".$user->address()->street}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -69,7 +69,7 @@
                                     <p class="mb-0">AiS ID</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">{{$user->uid}}</p>
+                                    <p class="text-muted mb-0">{{$user->user()->uid}}</p>
                                 </div>
                             </div>
                         </div>

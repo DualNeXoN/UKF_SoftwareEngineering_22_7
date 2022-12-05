@@ -14,7 +14,11 @@ class Person extends Model
 
     protected $guarded = [];
 
-    protected function address() {
+    public function address() {
         return $this->hasOne(Address::class, 'id', 'address_id')->get()->first();
     }
+    public function user(){
+        return $this->hasOne(User::class,'id', 'general_user_id')->get()->first();
+    }
+
 }
