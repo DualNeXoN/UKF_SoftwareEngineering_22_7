@@ -33,8 +33,16 @@
                             <a class="navbar-brand dropdown-item" href="/practice/list">Show all practices</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active mw mx-2" href="/company/person">Company Person</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdownPractice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company panel
+                        </a>
+                        <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
+                            <a class="nav-link active mw mx-2" href="/company/person">Company practices</a>
+                            <a class="nav-link active mw mx-2" href="/company/profile/{{Session::get('')}}">Company profile</a>
+
+                        </div>
                     </li>
                     <li class="nav-item">
                         @include('partials.languageSwitcher')
@@ -45,6 +53,12 @@
         @if (Session::has('user'))
             <?php $user = Session::get('user'); ?>
             <a href="/students" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
+
+            <a href="/logout">
+                <button class="btn-control btn btn-outline-dark my-2 my-sm-0 mr" id="mynavbar" type="submit">Logout</button>
+            </a>
+
+
         @else
             <!-- Login form -->
             @if (Session::has('fail'))
@@ -73,7 +87,6 @@
                     </span>
                 </div>
                 <button class="btn-control btn btn-outline-dark btwn-2" type="submit">Login</button>
-                <button class="btn-control btn btn-outline-dark btn-lg btwn-2 collapse navbar-collapse px-4" id="mynavbar" type="submit">Logout</button>
             </form>
         @endif
     </div>
