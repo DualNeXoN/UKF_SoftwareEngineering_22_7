@@ -17,8 +17,8 @@ class Company extends Model {
         return $this->hasOne(Address::class, 'id', 'address_id')->get()->first();
     }
 
-    protected function person(){
-        return $this->hasOne(Person::class, 'id','contact_person_id');
+    public function person(){
+        return $this->hasOne(Person::class, 'id','contact_person_id')->get()->first();
     }
 
     public function professional_practice(){

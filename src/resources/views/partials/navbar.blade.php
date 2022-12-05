@@ -40,7 +40,11 @@
                         </a>
                         <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
                             <a class="nav-link active mw mx-2" href="/company/person">Company practices</a>
-                            <a class="nav-link active mw mx-2" href="/company/profile/{{Session::get('')}}">Company profile</a>
+                            @if (Session::has('user'))
+                                <a class="nav-link active mw mx-2" href="/company/profile/{{Session::get('user')->id}}">Company profile</a>
+                            @else
+                                <a class="nav-link active mw mx-2" > Company profile</a>
+                            @endif
 
                         </div>
                     </li>

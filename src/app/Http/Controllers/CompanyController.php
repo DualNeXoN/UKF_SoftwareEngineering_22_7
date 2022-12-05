@@ -13,10 +13,16 @@ use App\Http\Controllers\PracticeController;
 
 class CompanyController extends Controller
 {
-    function getCompany($id){
-        $company = Company::where('contact_person_id',$id)->first();
-        return $company;
+    function companyProfile($id)
+    {
+        if (Session::has('user')) {
+            if (Session::get('user')) {
+                $company = Company::where('contact_person_id', $id)->first();
+                return view('companies')->with('company', $company);;
+            }
+        }return 'niesi prihlaseny';
     }
+
      function getAllCompanies(){
        return Company::all();
     }
@@ -52,6 +58,7 @@ class CompanyController extends Controller
     }
     function companyPractices(){
         if(Session::has('user')){
+
             $practices = $this->getCompany(Session::get('user')->id);
             $practices = $practices->professional_practice()->get();
             return view('companyperson')->with('practices',$practices);
