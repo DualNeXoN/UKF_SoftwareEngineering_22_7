@@ -99,12 +99,11 @@
 
 
             <?php $user = Session::get('user'); ?>
-            <a href="/student/profile/{{$user->id}}" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
-
+            <a href="/student/profile/{{$user->id}}" class="link-primary"><button class="btn-control btn btn-dark mb-auto"><i class="bi bi-person-circle"></i> {{ $user['name'] . ' ' . $user['surname'] }}
+            </button></a>
             <a href="/logout">
-                <button class="btn-control btn btn-outline-dark my-2 my-sm-0 mr" id="mynavbar" type="submit">{{__("translation.logout")}}</button>
+                <button class="btn-control btn btn-outline-dark my-2 my-sm-0 mr btwn-2" id="mynavbar" type="submit">{{__("translation.logout")}}</button>
             </a>
-
 
         @else
             <!-- Login form -->
