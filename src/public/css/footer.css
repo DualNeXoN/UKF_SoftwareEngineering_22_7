@@ -7,6 +7,11 @@ footer {
     padding: 10px;
 }
 
+.sticky-footer {
+    position: sticky;
+    top: 100%;
+}
+
 .footer-row {
     --bs-gutter-x: 0 !important;
 }

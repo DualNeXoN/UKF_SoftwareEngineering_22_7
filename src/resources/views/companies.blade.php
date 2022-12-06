@@ -13,15 +13,17 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <img src="{{ asset('img/company.png') }}" alt="avatar" class="img-fluid" style="width: 150px;">
-                            <h5 class="my-3">Name of Company</h5>
+                            <h5 class="my-3">{{$company->name}}</h5>
                         </div>
                         <hr width="100%">
                         <div class="card-body text-center">
                             <img src="{{ asset('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp') }}" alt="avatar" class="img-fluid" style="width: 150px;">
-                            <h5 class="my-3">Contact person's name</h5>
+                            <h5 class="my-3">{{$company->person()->name}}</h5>
                             <div class="d-flex justify-content-center mb-2">
                                 <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">Edit</button>
-                                <button type="button" class="btn btn-outline-primary ms-1 full-width">Show Contact Person</button>
+                                <form method="GET" action="/student/profile/{{$company->person()->id}}">
+                                <button type="submit"  class="btn btn-outline-primary ms-1 full-width">Show Contact Person</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -32,19 +34,10 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">ID</p>
-                                </div>
-                                <div class="col-sm-9">
-                                    <p class="text-muted mb-0">0</p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
                                     <p class="mb-0">Company Name</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Name of company</p>
+                                    <p class="text-muted mb-0">{{$company->name}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -53,7 +46,8 @@
                                     <p class="mb-0">Company Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Address</p>
+                                    <p class="text-muted mb-0">
+                                        {{$company->address()->number." ".$company->address()->street." ".$company->address()->town()->name." ".$company->address()->town()->country()->name}}</p>
                                 </div>
                             </div>
 

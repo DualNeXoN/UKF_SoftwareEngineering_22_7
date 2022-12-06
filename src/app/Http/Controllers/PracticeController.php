@@ -1,15 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\AcademicYear;
-use App\Models\Company;
 use App\Models\StudentPractice;
 use App\Models\Practice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use MongoDB\Driver\Session;
-
 
 class PracticeController extends Controller {
 

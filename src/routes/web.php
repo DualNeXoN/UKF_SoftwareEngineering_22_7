@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PracticeController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
@@ -35,12 +36,6 @@ Route::post('register',[RegisterController::class,'register'])->name('register-u
 
 //End of: Auth System
 
-Route::get('/students', function () {
-    return view('students');
-});
-
-
-
 
 
 Route::get('/admin/companies', function () {
@@ -50,20 +45,22 @@ Route::get('/admin/companies', function () {
 Route::get('/admin/departments', function () {
     return view('admindepartments');
 });
-
-
+//Student
+Route::get('/student/profile/{id}', [UserController::class,'userProfile']);
+//Company
 Route::get('/company/person',[CompanyController::class,'companyPractices']);
 Route::post('company/person/add-practice',[CompanyController::class,'addPractice'])->name('addPractice');
 Route::post('company/person/update-practice',[CompanyController::class,'updatePractice'])->name('updatePractice');
 Route::delete('/company/person/delete-practice/{id}',[CompanyController::class,'deletePractice']);
-//Route::get('/{id}', [CompanyController::class,'getCompany']);
-//Route::get('/companies', [CompanyController::class,'getAllCompanies']);
+Route::get('/company/profile/{id}', [CompanyController::class,'companyProfile'])->name('company-profile');
+Route::get('/company/', [CompanyController::class,'getAllCompanies']);
 
+//Admin
 Route::delete('delete-user/{user}',[AdminController::class,'removeUser']);
 Route::post('admin/users/reset-password', [AdminController::class,'resetPassword']);
 Route::get('/admin/users', [AdminController::class,'getUsers']);
 
-
+//Practices
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
 Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
 Route::get('practice/profile/{id}',[PracticeController::class,'getPractice'])->name('practice-profile');;
