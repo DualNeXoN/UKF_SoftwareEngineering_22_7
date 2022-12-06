@@ -243,3 +243,7 @@ body {
         line-height: 2.5rem;
     }
 }
+
+.alert {
+    height: 50px;
+}
