@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col main-label">
@@ -59,11 +58,11 @@
                                 </td>
                             </tr>
                         </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
     <!--Edit modal Professional Practice -->
     <div class="modal fade" id="editModal-{{$practice->id}}">
         <div class="modal-dialog modal-lg" role="document">
