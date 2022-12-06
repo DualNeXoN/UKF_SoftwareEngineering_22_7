@@ -22,9 +22,9 @@ class User extends Model {
     ];
 
     public function person() {
-        return $this->belongsTo(Person::class)->get()->first();
+        return $this->belongsTo(Person::class,'id','general_user_id')->get()->first();
     }
-    
+
     public function role() {
         return $this->hasOne(Role::class, 'id', 'role_id')->get()->first();
     }

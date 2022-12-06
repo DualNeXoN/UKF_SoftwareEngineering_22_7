@@ -30,7 +30,7 @@ class LoginController extends Controller
                 if(Hash::check($request['password'], $user->password))
                 {
                     if(session()->has('user')){
-                        return "U cant log in because another user id logged";
+                        return "U cant log in because another user is logged";
                     }else{
                         $result = $this->userDataStore($user->id);
                         session()->put('user',$result);

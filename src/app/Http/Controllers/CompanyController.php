@@ -22,7 +22,9 @@ class CompanyController extends Controller
             }
         }return 'niesi prihlaseny';
     }
-
+    function getCompany($id){
+        return Company::where('contact_person_id',$id)->first();
+    }
      function getAllCompanies(){
        return Company::all();
     }

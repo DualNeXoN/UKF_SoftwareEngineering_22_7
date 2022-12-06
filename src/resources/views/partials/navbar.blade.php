@@ -52,7 +52,7 @@
         </div>
         @if (Session::has('user'))
             <?php $user = Session::get('user'); ?>
-            <a href="/students" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
+            <a href="/student/profile/{{$user->id}}" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
 
             <a href="/logout">
                 <button class="btn-control btn btn-outline-dark my-2 my-sm-0 mr" id="mynavbar" type="submit">{{__("translation.logout")}}</button>
