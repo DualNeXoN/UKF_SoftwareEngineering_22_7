@@ -2,19 +2,49 @@
     <div class="container-fluid">
         <a href="/"><img src="{{ asset('img/logo_pputils_t.png') }}" alt="Logo" width="75" class="navbar-brand"></a>
 
-        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"">
+        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            @if (Session::has('user'))
+                <!--
+
+                SEM IDU KOMPONENTY AK SI PRIHLASENY
+
+                -->
+
 
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active mw mx-2" href="/">{{__("translation.home")}}</a>
                     </li>
+                    @if(\App\Http\Controllers\PermissionController::checkPermision(array(4)))
+
+                        <!--
+
+                         SEM IDU KOMPONENTY PRE STUDENTA
+
+                        -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdownPractice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{__("translation.student practice")}}
+                            </a>
+                            <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
+                                <a class="navbar-brand dropdown-item" href="/practice/list">{{__("translation.show all practices")}}</a>
+                            </div>
+                        </li>
+                    @elseif(\App\Http\Controllers\PermissionController::checkPermision(array(1)))
+
+                        <!--
+
+                         SEM IDU KOMPONENTY PRE ADMINA
+
+                        -->
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__("translation.admin panel")}}
@@ -25,32 +55,49 @@
                             <a class="navbar-brand dropdown-item" href="/admin/departments">{{__("translation.departments")}}</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdownPractice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{__("translation.student practice")}}
-                        </a>
-                        <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
-                            <a class="navbar-brand dropdown-item" href="/practice/list">{{__("translation.show all practices")}}</a>
-                        </div>
-                    </li>
+                    @elseif(\App\Http\Controllers\PermissionController::checkPermision(array(5)))
 
+                        <!--
+
+                         SEM IDU KOMPONENTY PRE KONTAKTNU OSOBU FIRMY
+
+                        -->
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdownPractice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__("translation.company panel")}}
                         </a>
                         <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
                             <a class="nav-link active mw mx-2" href="/company/person">{{__("translation.company practices")}}</a>
-                            <a class="nav-link active mw mx-2" href="/company/profile/{{Session::get('')}}">{{__("translation.company profile")}}</a>
+                            <a class="nav-link active mw mx-2" href="/company/profile/">{{__("translation.company profile")}}</a>
 
                         </div>
                     </li>
+                    @elseif(\App\Http\Controllers\PermissionController::checkPermision(array(2)))
+
+                        <!--
+
+                         SEM IDU KOMPONENTY PRE VEDUCEHO ODDELENIA
+
+                        -->
+
+                    @elseif(\App\Http\Controllers\PermissionController::checkPermision(array(3)))
+
+                        <!--
+
+                         SEM IDU KOMPONENTY PRE POVERENEHO PRACOVNIKA
+
+                        -->
+
+                    @endif
                     <li class="nav-item">
                         @include('partials.languageSwitcher')
                     </li>
                 </ul>
             </div>
         </div>
-        @if (Session::has('user'))
+
+
+
             <?php $user = Session::get('user'); ?>
             <a href="/student/profile/{{$user->id}}" class="link-primary fs-3">{{ $user['name'] . ' ' . $user['surname'] }}</a>
 

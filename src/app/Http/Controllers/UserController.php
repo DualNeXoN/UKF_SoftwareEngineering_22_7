@@ -21,7 +21,12 @@ class UserController extends Controller
     }
     function userProfile($id){
         $user = Person::where('id',$id)->first();
-        return view('students')->with('user',$user);
+        $permisonController = new PermissionController();
+        $persmision = $permisonController->checkPermision(array(2,3,4,5));
+        if($persmision){
+            return view('students')->with('user',$user);
+        }
+        return "U have not permision";//
     }
     public function update(Request $request){
         $user = User::where('uid',$request['uid'])->first()->update([]);
