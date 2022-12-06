@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\UserController;
+use App\CustomClasses\GraphData;
 
 Route::get('/', function () {
     return view('home');
@@ -72,3 +73,4 @@ Route::get('/graph/show', function () {
 Route::get('/graph/data', function () {
     return GraphHelper::staticData();
 });
+Route::get('/charts/data/assignedpractices',[GraphData::class,'assignedPractices']);
