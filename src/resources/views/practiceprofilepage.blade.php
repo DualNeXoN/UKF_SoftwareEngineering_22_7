@@ -1,36 +1,36 @@
 @extends('layouts.layout')
 
 @section('content')
-   <!-- {{$practice}}-->
+
    <div class="container z-depth-1 my-5 p-5">
 
 <!-- Section -->
 <section>
-  <h3 class="font-weight-bold text-center dark-grey-text pb-2">PROFESIONAL PRACTICE LIST</h3>
+  <h3 class="font-weight-bold text-center dark-grey-text pb-2">{{$practice->label}}</h3>
   <hr class="w-header my-4">
- 
+
   <div class="row d-flex justify-content-center">
 
   <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Study Programme</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Aplikovaná Informatika</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->studyProgramme()->name}}</p>
     </div>
 
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Company</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Nieco o Company.............</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->company()->name}}</p>
     </div>
 
 
     <div class="col-md-6 col-xl-4">
-      <h5 class="font-weight-normal">Contract Type</h5>   
+      <h5 class="font-weight-normal">Contract Type</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Nieco......................................</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->contractType()->contract}}</p>
     </div>
 
 
@@ -38,49 +38,42 @@
       <h5 class="font-weight-normal">Description</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Nieco...............................................................................................................</p>
-    </div>
-
-    <div class="col-md-6 col-xl-4">
-      <h5 class="font-weight-normal">Number</h5>
-    </div>
-    <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">+42198473291</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->description}}</p>
     </div>
 
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Adress</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Adresa.................</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->company()->address()->number.' '.$practice->company()->address()->street.' / '.$practice->company()->address()->postcode.' '.$practice->company()->address()->town()->name}}</p>
     </div>
 
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Contact Person</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Contact person.........................</p>
+      <p class="text-muted mb-5 pb-2">{{$practice->company()->person()->name.' '.$practice->company()->person()->surname}}</p>
     </div>
 
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Academic Year</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">2022</p>
-    </div>
+      <p class="text-muted mb-5 pb-2">
+        @if($practice->isAvailable() == 'true')
+              {{$practice->studentPractice()->academicYear()->year}}
+          @else
+            is not assigned
+          @endif
 
-    <div class="col-md-6 col-xl-4">
-      <h5 class="font-weight-normal">Student Feedback</h5>
-    </div>
-    <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Nieco...................................................................</p>
+      </p>
     </div>
 
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Company Feedback</h5>
     </div>
     <div class="col-md-6">
-      <p class="text-muted mb-5 pb-2">Nieco.....................................................................................</p>
+      <p class="text-muted mb-5 pb-2"></p>
     </div>
 
   </div>

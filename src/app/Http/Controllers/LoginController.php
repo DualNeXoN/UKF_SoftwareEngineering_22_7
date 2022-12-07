@@ -34,7 +34,7 @@ class LoginController extends Controller
                     }else{
                         $result = $this->userDataStore($user->id);
                         session()->put('user',$result);
-                        return  view('home');
+                        return  redirect('/');
                     }
                 }return back()->with('fail','Wrong password.');
             }

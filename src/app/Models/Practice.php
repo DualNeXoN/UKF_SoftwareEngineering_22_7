@@ -11,6 +11,10 @@ class Practice extends Model {
 
     protected $guarded = [];
 
+    public function studentPractice(){
+       return $this->belongsTo(StudentPractice::class,'id','professional_practice_id')->get()->first();
+    }
+
     public function company() {
         return $this->hasOne(Company::class, 'id', 'company_id')->get()->first();
     }
@@ -25,7 +29,9 @@ class Practice extends Model {
 
     public function isAvailable() {
         $result = DB::table('student_professional_practice')->where('professional_practice_id', $this->id)->get();
-        return count($result) == 0 ? true : false;
+        if(count($result) == 0 ) {return  'false';;}
+        else{return 'true';}
+
     }
 
     public function isUserAssigned($id = null) {
@@ -33,5 +39,5 @@ class Practice extends Model {
         $result = DB::table('student_professional_practice')->where('professional_practice_id', $this->id)->get()->value('student_id');
         return $result == $id;
     }
-    
+
 }
