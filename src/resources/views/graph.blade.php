@@ -7,29 +7,29 @@
 @section('content')
 
 
-    <div>
-        <canvas id="myChart"></canvas>
+    <div style="width: 800px;">
+        <canvas id="studentPractices"></canvas>
     </div>
     
     <script>
 
-        $.getJSON('http://localhost:8080/graph/data', function(data) {
+        $.getJSON('http://localhost:8080/charts/data/assignedpractices', function(data) {
             
-            var labels = data.academic_year.map(function(e) {
+            var labels = data.academicYears.map(function(e) {
                 return e;
             });
-            var data = data.number_of_students.map(function(e) {
+            var data = data.assignedStudents.map(function(e) {
                 return e;
             });
 
-            const ctx = document.getElementById('myChart');
+            const ctx = document.getElementById('studentPractices');
         
             new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '# of students',
                     data: data,
                     borderWidth: 1
                 }]
