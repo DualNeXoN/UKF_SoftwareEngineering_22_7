@@ -2,6 +2,10 @@
  
 // lang/en/messages.php
  
+// sample for translation string is
+// {{__("translation.string")}}
+// where .string is the first word in the list below
+
 return [
     'yes' => 'Да',
     'no' => 'Нет',
