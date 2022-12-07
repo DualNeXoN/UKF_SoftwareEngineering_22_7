@@ -11,20 +11,24 @@
  
   <div class="row d-flex justify-content-center">
 
+  <div class="col-md-6 col-xl-4">
+      <h5 class="font-weight-normal">Study Programme</h5>
+    </div>
+    <div class="col-md-6">
+      <p class="text-muted mb-5 pb-2">Aplikovaná Informatika</p>
+    </div>
+
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Company</h5>
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">Nieco o Company.............</p>
     </div>
 
 
     <div class="col-md-6 col-xl-4">
-      <h5 class="font-weight-normal">Contract type</h5>
-      
+      <h5 class="font-weight-normal">Contract Type</h5>   
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">Nieco......................................</p>
     </div>
@@ -33,7 +37,6 @@
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Description</h5>
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">Nieco...............................................................................................................</p>
     </div>
@@ -41,7 +44,6 @@
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Number</h5>
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">+42198473291</p>
     </div>
@@ -49,7 +51,6 @@
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Adress</h5>
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">Adresa.................</p>
     </div>
@@ -57,9 +58,29 @@
     <div class="col-md-6 col-xl-4">
       <h5 class="font-weight-normal">Contact Person</h5>
     </div>
-
     <div class="col-md-6">
       <p class="text-muted mb-5 pb-2">Contact person.........................</p>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <h5 class="font-weight-normal">Academic Year</h5>
+    </div>
+    <div class="col-md-6">
+      <p class="text-muted mb-5 pb-2">2022</p>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <h5 class="font-weight-normal">Student Feedback</h5>
+    </div>
+    <div class="col-md-6">
+      <p class="text-muted mb-5 pb-2">Nieco...................................................................</p>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <h5 class="font-weight-normal">Company Feedback</h5>
+    </div>
+    <div class="col-md-6">
+      <p class="text-muted mb-5 pb-2">Nieco.....................................................................................</p>
     </div>
 
   </div>
