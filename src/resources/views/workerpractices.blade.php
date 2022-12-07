@@ -23,11 +23,11 @@
                             <tr>
                                 <td>Practice</td>
                                 <td>Company</td>
-                                <td class="text-bg-success justify-content-center text-center">Approved</td>
+                                <td class="text-success justify-content-center">Approved</td>
                                 <td>
                                     <div class="col-12 col-xl-4 operation">
                                         <form method="post" action="#">
-                                            <button type="submit" class="btn btn-primary full-width">Show</button>
+                                            <a href="/"><button type="submit" class="btn btn-primary full-width">Show</button>
                                         </form>
                                     </div>
                                 </td>
@@ -35,7 +35,7 @@
                             <tr>
                                 <td>Practice</td>
                                 <td>Company</td>
-                                <td class="text-bg-danger justify-content-center text-center">Not Approved</td>
+                                <td class="text-danger justify-content-center">Not Approved</td>
                                 <td>
                                     <div class="col-12 col-xl-4 operation">
                                         <form method="post" action="#">
