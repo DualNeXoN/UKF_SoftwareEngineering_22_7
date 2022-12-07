@@ -17,8 +17,8 @@
                                 <h5 class="my-3">{{ $user->name . ' ' . $user->surname }}</h5>
                                 <p class="text-muted mb-1">{{ $user->role }}</p>
                                 <div class="d-flex justify-content-center mb-2">
-                                    <button type="button" class="btn btn-primary full-width">{{ __('translation.edit') }}</button>
-                                    <a href="/student/practicereport"><button  type="button" class="btn btn-outline-primary ms-1 full-width">Practice report</button></a>
+                                    <button type="button" class="btn btn-primary w-25">{{ __('translation.edit') }}</button>
+                                    <a href="/student/practicereport"><button type="button" class="btn btn-outline-primary ms-1 full-width">Practice report</button></a>
                                 </div>
                             </div>
                         </div>
