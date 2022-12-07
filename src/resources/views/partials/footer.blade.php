@@ -7,7 +7,7 @@
             <strong>PPUtils</strong>
         </div>
         <div class="col-12 col-md-3">
-            admin@pputils.co
+            admin@pputils.com
         </div>
     </div>
 </footer>

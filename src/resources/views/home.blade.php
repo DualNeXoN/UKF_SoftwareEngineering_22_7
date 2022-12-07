@@ -23,7 +23,7 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-users fa-3x"></i></div>
                         </div>
                         <img class="img-fluid" src="{{ asset('img/users.png') }}" alt="..." />
                     </div>
@@ -32,7 +32,7 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-briefcase fa-3x"></i></div>
                         </div>
                         <img class="img-fluid" src="{{ asset('img/companies.png') }}" alt="..." />
                     </div>
@@ -41,7 +41,7 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-building fa-3x"></i></div>
                         </div>
                         <img class="img-fluid" src="{{ asset('img/department.png') }}" alt="..." />
                     </div>
@@ -53,7 +53,7 @@
     <section class="page-section bg-primary mb-0 text-white" id="about">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-uppercase text-center text-white">{{__("translation.about")}}</h2>
+            <h2 class="page-section-heading text-uppercase text-center text-white">{{ __('translation.about') }}</h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -63,10 +63,10 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ms-auto">
-                    <p class="lead">{{__("translation.home about 1")}}</p>
+                    <p class="lead">{{ __('translation.home about 1') }}</p>
                 </div>
                 <div class="col-lg-4 me-auto">
-                    <p class="lead">{{__("translation.home about 2")}}</p>
+                    <p class="lead">{{ __('translation.home about 2') }}</p>
                 </div>
             </div>
             <!-- About Section Button-->
