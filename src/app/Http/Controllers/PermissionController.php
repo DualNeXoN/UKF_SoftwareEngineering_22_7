@@ -15,6 +15,6 @@ class PermissionController extends Controller
                         return true;
                     }
             } return false;
-        }return "Nie ste prihlásený";
+        }return "U are not logged in";
     }
 }

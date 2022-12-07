@@ -35,15 +35,16 @@ class UserController extends Controller
         $user = User::where('uid',$request['uid'])->first()->update([]);
     }
     public function practiceReport(){
-        if(Session::has('user')){
             $permisonController = new PermissionController();
             $permisonController->checkPermision(array(4));
-            if($permisonController){
-                $state = StudentPractice::where('student_id',Session::get('user')->id)->get()->first();
-                $state = $state->practice_state_id;
+            if($permisonController == true){
+                if(count(StudentPractice::where('student_id',Session::get('user')->id)->get()) == 0){
+                    return "U have not assigned practice";
+                }
+                $state = StudentPractice::where('student_id',Session::get('user')->id)->get()->first()->practice_state_id;
                 return view('practicereport')->with('state',$state);
             }else return "U have not permission";
-        }return "U are not logged in";
+
     }
 }
 
