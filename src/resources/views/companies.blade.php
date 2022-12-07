@@ -20,7 +20,7 @@
                             <img src="{{ asset('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp') }}" alt="avatar" class="img-fluid" style="width: 150px;">
                             <h5 class="my-3">{{$company->person()->name}}</h5>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">Edit</button>
+                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">{{__("translation.edit")}}</button>
                                 <form method="GET" action="/student/profile/{{$company->person()->id}}">
                                 <button type="submit"  class="btn btn-outline-primary ms-1 full-width">{{__("translation.show contact person")}}</button>
                                 </form>

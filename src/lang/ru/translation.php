@@ -117,5 +117,8 @@ return [
     'full time' => 'Полная занятость',
     'part time' => 'Частичная занятость',
     'freelance' => 'Фриланс',
+    'practice report' => 'Отзыв о практике',
+    'approved report' => 'Подтвержденный отзыв',
+    'get report' => 'Получить отзыв',
 
 ];

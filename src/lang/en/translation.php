@@ -71,7 +71,7 @@ return [
     'ais id' => 'Ais ID',
     'about' => 'About',
     'home about 1' => 'We are Lucky Seven and this is our project PPUtils.',
-    'home about 2' => 'We manage students, companies and department.',
+    'home about 2' => 'We manage students, companies and departments.',
     'adress' => 'Adress',
     'comp_adress' => 'Company adress',
     'actions' => 'Actions',
@@ -117,5 +117,8 @@ return [
     'full time' => 'Full-time',
     'part time' => 'Part-time',
     'freelance' => 'Freelance',
+    'practice report' => 'Practice Report',
+    'approved report' => 'Approved report',
+    'get report' => 'Get report',
 
 ];
