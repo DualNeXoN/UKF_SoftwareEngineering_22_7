@@ -9,6 +9,8 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\UserController;
 use App\CustomClasses\GraphData;
+use App\Http\Controllers\PermissionController;
+use \App\CustomClasses\Download;
 
 Route::get('/', function () {
     return view('home');
@@ -37,8 +39,6 @@ Route::post('register',[RegisterController::class,'register'])->name('register-u
 
 //End of: Auth System
 
-
-
 Route::get('/admin/companies', function () {
     return view('admincompanies');
 });
@@ -46,8 +46,16 @@ Route::get('/admin/companies', function () {
 Route::get('/admin/departments', function () {
     return view('admindepartments');
 });
+
+// link na stahovanie reportu o praxi
+Route::get('/download/report',function (){
+  $download = new Download();
+  return $download->download();
+
+});
 //Student
 Route::get('/student/profile/{id}', [UserController::class,'userProfile']);
+Route::get('/student/practicereport',[UserController::class,'practiceReport']);
 //Company
 Route::get('/company/person',[CompanyController::class,'companyPractices']);
 Route::post('company/person/add-practice',[CompanyController::class,'addPractice'])->name('addPractice');
