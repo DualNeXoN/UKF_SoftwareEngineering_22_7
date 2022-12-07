@@ -48,11 +48,7 @@ Route::get('/admin/departments', function () {
 });
 
 // link na stahovanie reportu o praxi
-Route::get('/download/report',function (){
-  $download = new Download();
-  return $download->download();
-
-});
+Route::get('/download/report',[Download::class,'download']);
 //Student
 Route::get('/student/profile/{id}', [UserController::class,'userProfile']);
 Route::get('/student/practicereport',[UserController::class,'practiceReport']);
