@@ -81,7 +81,7 @@
 
                         -->
                             <li class="nav-item">
-                                <a class="nav-link active mw mx-2" href="/temp">Practices</a>
+                                <a class="nav-link active mw mx-2" href="/worker/practices">Practices</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,7 +90,7 @@
                                 <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
                                     <a class="nav-link active mw mx-2" href="/">2019-2020</a>
                                     <a class="nav-link active mw mx-2" href="/">2020-2021</a>
-                                    <a class="nav-link active mw mx-2" href="/"">2021-2022</a>
+                                    <a class="nav-link active mw mx-2" href="/">2021-2022</a>
                                     <a class="nav-link active mw mx-2" href="/*">2022-2023</a>
 
                                 </div>

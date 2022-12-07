@@ -20,5 +20,8 @@ class Person extends Model
     public function user(){
         return $this->hasOne(User::class,'id', 'general_user_id')->get()->first();
     }
+    public function company(){
+        return $this->belongsTo(Company::class,'id','contact_person_id')->get()->first();
+    }
 
 }

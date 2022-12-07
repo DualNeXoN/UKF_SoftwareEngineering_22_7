@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+
+
+
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col main-label">
@@ -19,11 +22,26 @@
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
+
                         <tbody>
+
+                        @foreach($practices as $practice)
+                            @if(!is_null($practice->studentPractice()) && $practice->studentPractice()->archived == 1)
+                                @else
                             <tr>
-                                <td>Practice</td>
-                                <td>Company</td>
-                                <td class="text-success justify-content-center">Approved</td>
+                                <td>{{$practice->label}}</td>
+                                <td>{{$practice->company()->name}}</td>
+                            @if(is_null($practice->studentPractice()))
+                                    <td class="text-danger justify-content-center">Not assigned</td>
+                                    <td>
+                                        <div class="col-12 col-xl-4 operation">
+                                            <form method="post" action="#">
+                                                <button type="submit" class="btn btn-primary full-width disabled">Show</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                @else
+                                <td class="text-success justify-content-center">Assigned</td>
                                 <td>
                                     <div class="col-12 col-xl-4 operation">
                                         <form method="post" action="#">
@@ -31,20 +49,12 @@
                                         </form>
                                     </div>
                                 </td>
+                                @endif
                             </tr>
-                            <tr>
-                                <td>Practice</td>
-                                <td>Company</td>
-                                <td class="text-danger justify-content-center">Not Approved</td>
-                                <td>
-                                    <div class="col-12 col-xl-4 operation">
-                                        <form method="post" action="#">
-                                            <button type="submit" class="btn btn-primary full-width disabled">Show</button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endif
+                            @endforeach
                         </tbody>
+
                     </table>
                 </div>
             </div>

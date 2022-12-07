@@ -9,7 +9,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\UserController;
 use App\CustomClasses\GraphData;
-use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\AuthorizedWorker;
 use \App\CustomClasses\Download;
 
 Route::get('/', function () {
@@ -68,7 +68,10 @@ Route::get('/admin/users', [AdminController::class,'getUsers']);
 //Practices
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);
 Route::post('/practice/assign',[PracticeController::class,'assignStudent'])->name('practice-assign-student');
-Route::get('practice/profile/{id}',[PracticeController::class,'getPractice'])->name('practice-profile');;
+Route::get('practice/profile/{id}',[PracticeController::class,'getPractice'])->name('practice-profile');
+
+//AuthorizedWorker
+Route::get('/worker/practices',[AuthorizedWorker::class,'getAllPractices']);
 
 Route::get('/graph/show', function () {
     return view('graph');
@@ -79,6 +82,4 @@ Route::get('/graph/data', function () {
 });
 Route::get('/charts/data/assignedpractices',[GraphData::class,'assignedPractices']);
 
-Route::get('/temp', function () {
-    return view('workerpractices');
-});
+
