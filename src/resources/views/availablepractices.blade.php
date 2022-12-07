@@ -32,7 +32,7 @@
                             <p class="card-text"><strong>{{__("translation.description")}}</strong></p>
                             <p class="card-text scroll">{{ $practice->description }}</p>
                             <hr>
-                            @if($practice->isAvailable())
+                            @if($practice->isAvailable() == 'false')
                                 <form method="POST" action="{{ route('practice-assign-student') }}">
                                     @csrf
                                     <input type="hidden" name="practiceId" value="{{ $practice->id }}" />
