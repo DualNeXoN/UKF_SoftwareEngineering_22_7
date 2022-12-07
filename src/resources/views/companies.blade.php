@@ -22,7 +22,7 @@
                             <div class="d-flex justify-content-center mb-2">
                                 <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">Edit</button>
                                 <form method="GET" action="/student/profile/{{$company->person()->id}}">
-                                <button type="submit"  class="btn btn-outline-primary ms-1 full-width">Show Contact Person</button>
+                                <button type="submit"  class="btn btn-outline-primary ms-1 full-width">{{__("translation.show contact person")}}</button>
                                 </form>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Company Name</p>
+                                    <p class="mb-0">{{__("translation.name_comp_full")}}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">{{$company->name}}</p>
@@ -43,7 +43,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">Company Address</p>
+                                    <p class="mb-0">{{__("translation.comp_adress")}}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
@@ -115,7 +115,7 @@
                             <div class="col-12">
                                 <div style="border-radius: 15px;">
                                     <div class="p-md-5 p-4">
-                                        <h3 class="fw-bold">Edit Company profile</h3>
+                                        <h3 class="fw-bold">{{__("translation.edit company profile")}}</h3>
                                         <!-- Edit form -->
                                         <form>
                                             <div class="row">
@@ -130,7 +130,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3 class="fw-bold">Edit Contact profile</h3>
+                                            <h3 class="fw-bold">{{__("translation.edit contact profile")}}</h3>
                                             <div class="row">
                                                 <div class="col-md-6 mb-4">
 
@@ -158,7 +158,7 @@
                                                 </div>
                                             </div>
                                             <div style="margin-left: 270px">
-                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">Edit</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">{{__("translation.edit")}}</button>
                                             </div>
                                     </div>
                                     </form>
@@ -181,7 +181,7 @@
                             <div class="col-12">
                                 <div style="border-radius: 15px;">
                                     <div class="p-md-5 p-4">
-                                        <h3 class="fw-bold">Internships details</h3>
+                                        <h3 class="fw-bold">{{__("translation.internships details")}}</h3>
                                         <!-- Internships form -->
                                         <form>
                                             <div class="row text-center">
@@ -200,9 +200,8 @@
                                                 <hr>
                                             </div>
                                             <div class="d-grid d-md-block gap-2">
-                                                <button class="btn btn-outline-dark btn-lg px-5" type="button">Generate
-                                                    statement</button>
-                                                <button class="btn btn-outline-dark btn-lg px-5" style="margin-left: 200px" type="button">Feedback</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" type="button">{{__("translation.generate statement")}}</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" style="margin-left: 200px" type="button">{{__("translation.feedback")}}</button>
                                             </div>
                                         </form>
                                     </div>
