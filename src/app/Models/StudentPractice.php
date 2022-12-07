@@ -22,5 +22,8 @@ class StudentPractice extends Model {
     public function academicYear() {
         return $this->hasOne(AcademicYear::class, 'id', 'academic_year_id')->get()->first();
     }
-    
+    public function state(){
+        return $this->hasOne(practiceState::class, 'id', 'practice_state_id')->get()->first();
+    }
+
 }

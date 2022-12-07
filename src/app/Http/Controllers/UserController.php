@@ -2,6 +2,9 @@
 namespace App\Http\Controllers;
 use App\Models\Person;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
+use App\Models\StudentPractice;
+
 class UserController extends Controller
 {
     public function storeUserData($user){
@@ -30,6 +33,17 @@ class UserController extends Controller
     }
     public function update(Request $request){
         $user = User::where('uid',$request['uid'])->first()->update([]);
+    }
+    public function practiceReport(){
+        if(Session::has('user')){
+            $permisonController = new PermissionController();
+            $permisonController->checkPermision(array(4));
+            if($permisonController){
+                $state = StudentPractice::where('student_id',Session::get('user')->id)->get()->first();
+                $state = $state->practice_state_id;
+                return view('practicereport')->with('state',$state);
+            }else return "U have not permission";
+        }return "U are not logged in";
     }
 }
 

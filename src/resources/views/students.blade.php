@@ -18,7 +18,7 @@
                                 <p class="text-muted mb-1">{{ $user->role }}</p>
                                 <div class="d-flex justify-content-center mb-2">
                                     <button type="button" class="btn btn-primary full-width">{{ __('translation.edit') }}</button>
-                                    <button type="button" class="btn btn-outline-primary ms-1 full-width">{{ __('translation.practice') }}</button>
+                                    <a href="/student/practicereport"><button  type="button" class="btn btn-outline-primary ms-1 full-width">Practice report</button></a>
                                 </div>
                             </div>
                         </div>
