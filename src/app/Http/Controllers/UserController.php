@@ -41,7 +41,9 @@ class UserController extends Controller
                 if(count(StudentPractice::where('student_id',Session::get('user')->id)->get()) == 0){
                     return "U have not assigned practice";
                 }
-                $state = StudentPractice::where('student_id',Session::get('user')->id)->get()->first()->practice_state_id;
+
+                $state = StudentPractice::where('student_id',Session::get('user')->id)->get()->first();
+                $state = $state->practice_state_id;
                 return view('practicereport')->with('state',$state);
             }else return "U have not permission";
 
