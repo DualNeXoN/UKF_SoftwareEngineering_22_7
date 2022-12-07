@@ -17,7 +17,7 @@
                                 <h5 class="my-3">{{ $user->name . ' ' . $user->surname }}</h5>
                                 <p class="text-muted mb-1">{{ $user->role }}</p>
                                 <div class="d-flex justify-content-center mb-2">
-                                    <button type="button" class="btn btn-primary w-25">{{ __('translation.edit') }}</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editedModal">{{ __('translation.edit') }}</button>
                                     <a href="/student/practicereport"><button type="button" class="btn btn-outline-primary ms-1 full-width">Practice report</button></a>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="editModal">
+        <div class="modal fade" id="editedModal">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <!-- Modal Header -->
@@ -89,18 +89,18 @@
                         <div class="col-12">
                             <div style="border-radius: 15px;">
                                 <div class="p-md-5 p-4">
-                                    <h3 class="fw-bold">{{ __('translation.edit company profile') }}</h3>
+                                    <h3 class="fw-bold">Edit Student Profile</h3>
                                     <!-- Edit form -->
                                     <form>
                                         <div class="row">
                                             <div class="col-lg-6 mb-4">
                                                 <div class="forms-inputs-lg mb-4">
-                                                    <input type="text" placeholder="Company name" id="compName" class="form-control form-control-lg" />
+                                                    <input type="text" placeholder="First name" id="frstName" class="form-control form-control-lg" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 mb-4">
                                                 <div class="forms-inputs-lg mb-4">
-                                                    <input type="text" placeholder="Copmpany city" id="compCity" class="form-control form-control-lg" />
+                                                    <input type="text" placeholder="Last name" id="lastname" class="form-control form-control-lg" />
                                                 </div>
                                             </div>
                                         </div>
@@ -109,26 +109,22 @@
                                             <div class="col-md-6 mb-4">
 
                                                 <div class="forms-inputs mb-4">
-                                                    <input type="text" placeholder="Contact name" id="contName" class="form-control form-control-lg" />
+                                                    <input type="text" placeholder="Adress" id="add" class="form-control form-control-lg" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="forms-inputs mb-4">
-                                                    <input type="text" placeholder="Contact surname" id="contSur" class="form-control form-control-lg" />
+                                                    <input type="text" placeholder="Ais ID" id="ais" class="form-control form-control-lg" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 mb-4 pb-2">
 
-                                                <div class="forms-inputs mb-4">
-                                                    <input type="email" placeholder="Contact E-mail" id="contEmail" class="form-control form-control-lg" />
-                                                </div>
+                                                
                                             </div>
                                             <div class="col-md-6 mb-4 pb-2">
-                                                <div class="forms-inputs mb-4">
-                                                    <input type="text" placeholder="Contact address" id="contAddress" class="form-control form-control-lg" />
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div style="margin-left: 270px">
