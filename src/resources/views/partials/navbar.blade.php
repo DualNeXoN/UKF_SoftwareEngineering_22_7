@@ -81,7 +81,7 @@
 
                         -->
                             <li class="nav-item">
-                                <a class="nav-link active mw mx-2" href="/">Practices</a>
+                                <a class="nav-link active mw mx-2" href="/temp">Practices</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link active dropdown-toggle mw mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

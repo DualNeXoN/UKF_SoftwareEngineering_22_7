@@ -78,3 +78,7 @@ Route::get('/graph/data', function () {
     return GraphHelper::staticData();
 });
 Route::get('/charts/data/assignedpractices',[GraphData::class,'assignedPractices']);
+
+Route::get('/temp', function () {
+    return view('workerpractices');
+});
