@@ -61,7 +61,6 @@ class CompanyController extends Controller
     }
     function companyPractices(){
         if(Session::has('user')){
-
             $practices = $this->getCompany(Session::get('user')->id);
             $practices = $practices->professional_practice()->get();
             return view('companyperson')->with('practices',$practices);

@@ -94,7 +94,7 @@
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="number" placeholder={{__("translation.uid")}} min="100000" max="999999" name="uid" class="form-control form-control-lg"/>
+                                                <input type="number" placeholder="{{__("translation.uid")}}" min="100000" max="999999" name="uid" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
@@ -109,19 +109,19 @@
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder={{__("translation.name_first")}} name="First Name" maxlength="45" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder="{{__("translation.name_first")}}" name="First Name" maxlength="45" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 mb-4">
                                             <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder={{__("translation.name_last")}} name="Last Name" maxlength="45" class="form-control form-control-lg"/>
+                                                <input type="text" placeholder="{{__("translation.name_last")}}" name="Last Name" maxlength="45" class="form-control form-control-lg"/>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 mb-4">
                                             <div class="forms-inputs mb-4">
-                                                <input type="date" placeholder={{__("translation.birth date")}} name="birth" class="form-control form-control-lg" id="birthdayDate"/>
+                                                <input type="date" placeholder="{{__("translation.birth date")}}" name="birth" class="form-control form-control-lg" id="birthdayDate"/>
                                             </div>
                                         </div>
 
@@ -170,7 +170,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                 </form>
                             </div>
                         </div>

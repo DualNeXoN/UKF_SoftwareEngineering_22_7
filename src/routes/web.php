@@ -34,7 +34,7 @@ Route::get('/translations/{param}', function ($param) {
 
 Route::post('/login',[LoginController::class,'loginUser'])->name('login-user');
 Route::get('/logout',[LoginController::class,'Logout']);
-Route::post('register',[RegisterController::class,'register'])->name('register-user');
+
 
 //End of: Auth System
 
@@ -63,6 +63,7 @@ Route::get('/company/', [CompanyController::class,'getAllCompanies']);
 Route::delete('delete-user/{user}',[AdminController::class,'removeUser']);
 Route::post('admin/users/reset-password', [AdminController::class,'resetPassword']);
 Route::get('/admin/users', [AdminController::class,'getUsers']);
+Route::post('register',[RegisterController::class,'register'])->name('register-user');
 
 //Practices
 Route::get('/practice/list', [PracticeController::class, 'getAllPractices']);

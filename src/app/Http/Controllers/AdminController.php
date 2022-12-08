@@ -23,12 +23,11 @@ class AdminController extends Controller
     function removeUser($id){
      $person = Person::where('id',$id)->first();
      $general_user = User::where('id',$person->general_user_id)->first();
-     $company = Company::where();
+
      //$report = $person->name." ".$person->surname." ".$general_user->id;
      if($person == null || $general_user == null){
           return "null";
       }else {
-
          $person->delete();
          $general_user->delete();
      }
@@ -41,7 +40,8 @@ class AdminController extends Controller
         $hashed_random_password = Hash::make(123);
         User::where('id',$id)->first()->update(['password'=>$hashed_random_password]);
         return back();
+    }
+    public function addUser($user){
 
     }
-
 }
