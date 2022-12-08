@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section style="background-color: #eee;">
+    <section>
         <div class="container py-5">
 
             <div class="row">
@@ -13,16 +13,16 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <img src="{{ asset('img/company.png') }}" alt="avatar" class="img-fluid" style="width: 150px;">
-                            <h5 class="my-3">{{$company->name}}</h5>
+                            <h5 class="my-3">{{ $company->name }}</h5>
                         </div>
                         <hr width="100%">
                         <div class="card-body text-center">
                             <img src="{{ asset('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp') }}" alt="avatar" class="img-fluid" style="width: 150px;">
-                            <h5 class="my-3">{{$company->person()->name}}</h5>
+                            <h5 class="my-3">{{ $company->person()->name }}</h5>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary full-width" data-bs-toggle="modal" data-bs-target="#editeModal">{{__("translation.edit")}}</button>
-                                <form method="GET" action="/student/profile/{{$company->person()->id}}">
-                                <button type="submit"  class="btn btn-outline-primary ms-1 full-width">{{__("translation.show contact person")}}</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editeModal">{{ __('translation.edit') }}</button>
+                                <form method="GET" action="/student/profile/{{ $company->person()->id }}">
+                                    <button type="submit" class="btn btn-outline-primary ms-1 full-width">{{ __('translation.show contact person') }}</button>
                                 </form>
                             </div>
                         </div>
@@ -34,20 +34,20 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">{{__("translation.name_comp_full")}}</p>
+                                    <p class="mb-0">{{ __('translation.name_comp_full') }}</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">{{$company->name}}</p>
+                                    <p class="text-muted mb-0">{{ $company->name }}</p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <p class="mb-0">{{__("translation.comp_adress")}}</p>
+                                    <p class="mb-0">{{ __('translation.comp_adress') }}</p>
                                 </div>
                                 <div class="col-sm-9">
                                     <p class="text-muted mb-0">
-                                        {{$company->address()->number." ".$company->address()->street." ".$company->address()->town()->name." ".$company->address()->town()->country()->name}}</p>
+                                        {{ $company->address()->number .' ' .$company->address()->street .' ' .$company->address()->town()->name .' ' .$company->address()->town()->country()->name }}</p>
                                 </div>
                             </div>
 
@@ -55,49 +55,49 @@
                     </div>
                     <!-- Contact person info -->
                     <!-- (For now hidden)
-                                    <div class="col-lg-20 height">
-                                        <div class="card mb-4">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <p class="mb-0">Contact name</p>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <p class="text-muted mb-0">Name</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <p class="mb-0">Contact surname</p>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <p class="text-muted mb-0">Last name</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <p class="mb-0">Contact E-mail</p>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <p class="text-muted mb-0">email@email.com</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <p class="mb-0">Address</p>
-                                                    </div>
-                                                    <div class="col-sm-9">
-                                                        <p class="text-muted mb-0">Adress</p>
+                                            <div class="col-lg-20 height">
+                                                <div class="card mb-4">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <p class="mb-0">Contact name</p>
+                                                            </div>
+                                                            <div class="col-sm-9">
+                                                                <p class="text-muted mb-0">Name</p>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <p class="mb-0">Contact surname</p>
+                                                            </div>
+                                                            <div class="col-sm-9">
+                                                                <p class="text-muted mb-0">Last name</p>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <p class="mb-0">Contact E-mail</p>
+                                                            </div>
+                                                            <div class="col-sm-9">
+                                                                <p class="text-muted mb-0">email@email.com</p>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <p class="mb-0">Address</p>
+                                                            </div>
+                                                            <div class="col-sm-9">
+                                                                <p class="text-muted mb-0">Adress</p>
 
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    -->
+                                            -->
 
                 </div>
             </div>
@@ -115,7 +115,7 @@
                             <div class="col-12">
                                 <div style="border-radius: 15px;">
                                     <div class="p-md-5 p-4">
-                                        <h3 class="fw-bold">{{__("translation.edit company profile")}}</h3>
+                                        <h3 class="fw-bold">{{ __('translation.edit company profile') }}</h3>
                                         <!-- Edit form -->
                                         <form>
                                             <div class="row">
@@ -130,7 +130,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3 class="fw-bold">{{__("translation.edit contact profile")}}</h3>
+                                            <h3 class="fw-bold">{{ __('translation.edit contact profile') }}</h3>
                                             <div class="row">
                                                 <div class="col-md-6 mb-4">
 
@@ -158,7 +158,7 @@
                                                 </div>
                                             </div>
                                             <div style="margin-left: 270px">
-                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">{{__("translation.edit")}}</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" type="submit">{{ __('translation.edit') }}</button>
                                             </div>
                                     </div>
                                     </form>
@@ -181,7 +181,7 @@
                             <div class="col-12">
                                 <div style="border-radius: 15px;">
                                     <div class="p-md-5 p-4">
-                                        <h3 class="fw-bold">{{__("translation.internships details")}}</h3>
+                                        <h3 class="fw-bold">{{ __('translation.internships details') }}</h3>
                                         <!-- Internships form -->
                                         <form>
                                             <div class="row text-center">
@@ -200,8 +200,8 @@
                                                 <hr>
                                             </div>
                                             <div class="d-grid d-md-block gap-2">
-                                                <button class="btn btn-outline-dark btn-lg px-5" type="button">{{__("translation.generate statement")}}</button>
-                                                <button class="btn btn-outline-dark btn-lg px-5" style="margin-left: 200px" type="button">{{__("translation.feedback")}}</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" type="button">{{ __('translation.generate statement') }}</button>
+                                                <button class="btn btn-outline-dark btn-lg px-5" style="margin-left: 200px" type="button">{{ __('translation.feedback') }}</button>
                                             </div>
                                         </form>
                                     </div>
