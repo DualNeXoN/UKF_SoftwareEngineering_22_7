@@ -91,7 +91,7 @@
                                     <a class="nav-link active mw mx-2" href="/">2019-2020</a>
                                     <a class="nav-link active mw mx-2" href="/">2020-2021</a>
                                     <a class="nav-link active mw mx-2" href="/">2021-2022</a>
-                                    <a class="nav-link active mw mx-2" href="/*">2022-2023</a>
+                                    <a class="nav-link active mw mx-2" href="/">2022-2023</a>
 
                                 </div>
                             </li>
