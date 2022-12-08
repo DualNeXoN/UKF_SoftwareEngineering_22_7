@@ -15,12 +15,13 @@ class CompanyController extends Controller
 {
     function companyProfile($id)
     {
-        if (Session::has('user')) {
-            if (Session::get('user')) {
-                $company = Company::where('contact_person_id', $id)->first();
-                return view('companies')->with('company', $company);;
-            }
-        }return 'niesi prihlaseny';
+        if(PermissionController::checkPermision(array(5))){
+            $company = Company::where('contact_person_id', $id)->first();
+            return view('companies')->with('company', $company);;
+        }return "You have not permission";
+
+
+
     }
     function getCompany($id){
         return Company::where('contact_person_id',$id)->first();

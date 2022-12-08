@@ -16,4 +16,8 @@ class AuthorizedWorker extends Controller
         }return "U have not permission";
         //return view('availablepractices', compact('practices'));
     }
+    public function show($id){
+        return "funguje";
+        //return view('workerpracticesshow')->with('practice',$practice);
+    }
 }

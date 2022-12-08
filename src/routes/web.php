@@ -1,5 +1,4 @@
 <?php
-
 use App\Helpers\Graph\GraphHelper;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
@@ -72,6 +71,7 @@ Route::get('practice/profile/{id}',[PracticeController::class,'getPractice'])->n
 
 //AuthorizedWorker
 Route::get('/worker/practices',[AuthorizedWorker::class,'getAllPractices']);
+Route::get('/worker/practices/show/{$id}',[AuthorizedWorker::class,'show']);
 
 Route::get('/graph/show', function () {
     return view('graph');

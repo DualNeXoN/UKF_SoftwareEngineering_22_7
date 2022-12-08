@@ -64,7 +64,7 @@
                                 </a>
                                 <div class="navbar-brand dropdown-menu" aria-labelledby="navbarDropdownPractice">
                                     <a class="nav-link active mw mx-2" href="/company/person">{{ __('translation.company practices') }}</a>
-                                    <a class="nav-link active mw mx-2" href="/company/profile/">{{ __('translation.company profile') }}</a>
+                                    <a class="nav-link active mw mx-2" href="/company/profile/{{Session::get('user')->id}}">{{ __('translation.company profile') }}</a>
 
                                 </div>
                             </li>
