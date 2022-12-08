@@ -1,9 +1,10 @@
 @extends('layouts.layout')
 
+@section('head')
+    <link rel="stylesheet" href="{{ asset('css/workerpractices.css') }}">
+@endsection
+
 @section('content')
-
-
-
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col main-label">
@@ -25,33 +26,33 @@
 
                         <tbody>
 
-                        @foreach($practices as $practice)
-                            @if(!is_null($practice->studentPractice()) && $practice->studentPractice()->archived == 1)
+                            @foreach ($practices as $practice)
+                                @if (!is_null($practice->studentPractice()) && $practice->studentPractice()->archived == 1)
                                 @else
-                            <tr>
-                                <td>{{$practice->label}}</td>
-                                <td>{{$practice->company()->name}}</td>
-                            @if(is_null($practice->studentPractice()))
-                                    <td class="text-danger justify-content-center">Not assigned</td>
-                                    <td>
-                                        <div class="col-12 col-xl-4 operation">
-                                            <form method="post" action="#">
-                                                <button type="submit" class="btn btn-primary full-width disabled">Show</button>
-                                            </form>
-                                        </div>
-                                    </td>
-                                @else
-                                <td class="text-success justify-content-center">Assigned</td>
-                                <td>
-                                    <div class="col-12 col-xl-4 operation">
-                                        <form method="post" action="#">
-                                            <a href="/"><button type="submit" class="btn btn-primary full-width">Show</button>
-                                        </form>
-                                    </div>
-                                </td>
+                                    <tr>
+                                        <td>{{ $practice->label }}</td>
+                                        <td>{{ $practice->company()->name }}</td>
+                                        @if (is_null($practice->studentPractice()))
+                                            <td class="text-danger justify-content-center">Not assigned</td>
+                                            <td>
+                                                <div class="col-12 col-xl-4 operation">
+                                                    <form method="post" action="#">
+                                                        <button type="submit" class="btn btn-primary full-width disabled">Show</button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        @else
+                                            <td class="text-success justify-content-center">Assigned</td>
+                                            <td>
+                                                <div class="col-12 col-xl-4 operation">
+                                                    <form method="post" action="#">
+                                                        <a href="/"><button type="submit" class="btn btn-primary full-width">Show</button></a>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        @endif
+                                    </tr>
                                 @endif
-                            </tr>
-                            @endif
                             @endforeach
                         </tbody>
 
