@@ -57,83 +57,86 @@
                                     </div>
                                 </td>
                             </tr>
+                            <!--Edit modal Professional Practice -->
+                            <div class="modal fade" id="editModal-{{$practice->id}}">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="col-12">
+                                                <div style="border-radius: 15px;">
+                                                    <div class="p-md-5 p-4">
+                                                        <h3 class="fw-bold">{{__("translation.edit practice")}}</h3>
+                                                        <!-- Edit form -->
+                                                        <form method="POST" action="{{ route('updatePractice') }}">
+                                                            @csrf
+
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8 mb-4">
+                                                                    <div class="forms-inputs-lg mb-4">
+                                                                        <input type="text" placeholder="Label" name="label" class="form-control form-control-lg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8 mb-4">
+                                                                    <div class="forms-inputs-lg mb-4">
+                                                                        <textarea type="text" placeholder="Description" name="description" class="form-control form-control-lg input-description"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-lg-6 mb-4">
+                                                                    <div class="forms-inputs-lg mb-4">
+                                                                        <select class="form-select form-select-lg" name="studyProgram">
+                                                                            <option style="display:none">{{__("translation.study program")}}</option>
+                                                                            <option value="1">Ai-bc</option>
+                                                                            <option value="2">Ai-m</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 mb-4">
+                                                                    <div class="forms-inputs-lg mb-4">
+                                                                        <select class="form-select form-select-lg" name="contractType">
+                                                                            <option  style="display:none">{{__("translation.contract type")}}</option>
+                                                                            <option value="1">{{__("translation.full time")}}</option>
+                                                                            <option value="2">{{__("translation.part time")}}</option>
+                                                                            <option value="3">{{__("translation.freelance")}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row justify-content-center">
+                                                                <div class="col col-md-12 col-lg-6 col-xl-3">
+                                                                    <button class="btn btn-outline-dark btn-lg full-width" type="submit">{{__("translation.edit")}}</button>
+                                                                </div>
+                                                            </div>
+                                                            <input type="hidden" value="{{$practice->id}}" name="id">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <!--Edit modal Professional Practice -->
-    <div class="modal fade" id="editModal-{{$practice->id}}">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="col-12">
-                        <div style="border-radius: 15px;">
-                            <div class="p-md-5 p-4">
-                                <h3 class="fw-bold">{{__("translation.edit practice")}}</h3>
-                                <!-- Edit form -->
-                                <form method="POST" action="{{ route('updatePractice') }}">
-                                    @csrf
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <input type="text" placeholder="Label" name="label" class="form-control form-control-lg" />
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <textarea type="text" placeholder="Description" name="description" class="form-control form-control-lg input-description"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <select class="form-select form-select-lg" name="studyProgram">
-                                                    <option style="display:none">{{__("translation.study program")}}</option>
-                                                    <option value="1">Ai-bc</option>
-                                                    <option value="2">Ai-m</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 mb-4">
-                                            <div class="forms-inputs-lg mb-4">
-                                                <select class="form-select form-select-lg" name="contractType">
-                                                    <option  style="display:none">{{__("translation.contract type")}}</option>
-                                                    <option value="1">{{__("translation.full time")}}</option>
-                                                    <option value="2">{{__("translation.part time")}}</option>
-                                                    <option value="3">{{__("translation.freelance")}}</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row justify-content-center">
-                                        <div class="col col-md-12 col-lg-6 col-xl-3">
-                                            <button class="btn btn-outline-dark btn-lg full-width" type="submit">{{__("translation.edit")}}</button>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" value="{{$practice->id}}" name="id">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    @endforeach
     <!-- Modal Add Professional Practice -->
     <div class="modal fade" id="addModal">
         <div class="modal-dialog modal-lg" role="document">
