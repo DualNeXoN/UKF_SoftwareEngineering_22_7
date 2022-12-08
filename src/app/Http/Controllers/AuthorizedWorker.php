@@ -17,7 +17,16 @@ class AuthorizedWorker extends Controller
         //return view('availablepractices', compact('practices'));
     }
     public function show($id){
-        return "funguje";
-        //return view('workerpracticesshow')->with('practice',$practice);
+
+            $practice = Practice::where('id',$id)->first();
+        return view('workerpracticesshow')->with('practice',$practice);
+    }
+    public function refuse($id){
+        $practice = Practice::where('id',$id)->first()->studentPractice();
+        $practice->delete();
+        return redirect('/worker/practices');
+    }
+    public function allow(){
+
     }
 }

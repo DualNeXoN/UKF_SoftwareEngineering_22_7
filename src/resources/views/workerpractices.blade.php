@@ -25,6 +25,7 @@
                         @foreach($practices as $practice)
                             @if(!is_null($practice->studentPractice()) && $practice->studentPractice()->archived == 1)
                                 @else
+
                             <tr>
                                 <td>{{$practice->label}}</td>
                                 <td>{{$practice->company()->name}}</td>
